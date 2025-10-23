@@ -1,0 +1,13 @@
+# Build folders
+*/dist
+dist
+*/target
+target
+
+# Un-needed files:
+*.log
+*.lock
+
+# Code editors:
+.vscode
+

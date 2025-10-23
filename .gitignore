@@ -1,0 +1,31 @@
+# Package managers
+node_modules/*
+node_modules
+*/node_modules
+
+.npm/*
+.npm
+*/.npm
+
+# Cache folders/files
+*.pyc
+__pycache__
+*/__pycache__
+__pycache__/*
+
+# Build folders
+*/dist
+dist
+*/target
+target
+
+# Un-needed files:
+*.log
+*.lock
+*.package-lock.json
+package-lock.json
+
+# Code editors:
+.idea
+.vscode
+
