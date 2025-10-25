@@ -46,6 +46,12 @@ compile() {
   # src/ternary.cpp
   clang++ src/ternary.cpp -o dist/ternary
 
+  # src/operators.cpp
+  clang++ src/operators.cpp -o dist/operators
+
+  # src/projects/convertemp.cpp
+  clang++ src/projects/convertemp.cpp -o dist/projects/convertemp
+
   echo ""
   echo "Compiled all programs."
   echo ""

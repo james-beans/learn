@@ -16,10 +16,6 @@ void info() {
   cout << "tcalc - A calculator in the terminal.\n\n";
 }
 
-void n() {
-  cout << '\n';
-}
-
 int main() {
   info();
 
