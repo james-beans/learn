@@ -13,7 +13,7 @@ int main() {
   int y = 6;
   int sum = x + y; // sum = x + y
 
-  std::cout << x << "\n"; // print(x + "\n", end="")
+  std::cout << x << "\n"; // print(x, end="\n")
   std::cout << y << "\n";
   std::cout << sum << "\n";
 
