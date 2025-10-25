@@ -52,12 +52,17 @@ compile() {
   # src/projects/convertemp.cpp
   clang++ src/projects/convertemp.cpp -o dist/projects/convertemp
 
+  # src/string.cpp
+  clang++ src/string.cpp -o dist/string
+
   echo ""
   echo "Compiled all programs."
   echo ""
 }
 
 main() {
+  clear
+
   # Make the dist directory
   mkdir -p dist
   mkdir -p dist/projects
