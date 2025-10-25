@@ -67,6 +67,15 @@ compile() {
   # src/projects/rectangleloop.cpp
   clang++ src/projects/rectangleloop.cpp -o dist/projects/rectangleloop
 
+  # src/random.cpp
+  clang++ src/random.cpp -o dist/random
+
+  # src/projects/reg.cpp
+  clang++ src/projects/reg.cpp -o dist/projects/reg
+
+  # src/projects/gtn.cpp
+  clang++ src/projects/gtn.cpp -o dist/projects/gtn
+
   echo ""
   echo "Compiled all programs."
   echo ""
