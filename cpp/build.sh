@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 compile() {
-  # -- Basics:
-
   # src/hw.cpp
   clang++ src/hw.cpp -o dist/hw
+
+  # src/hwcpp.cpp
+  clang++ src/hwcpp.cpp -o dist/hwcpp
 
   # src/vars.cpp
   clang++ src/vars.cpp -o dist/vars
@@ -15,6 +16,37 @@ compile() {
   # src/namespaces.cpp
   clang++ src/namespaces.cpp -o dist/namespaces
 
+  # src/typedef.cpp
+  clang++ src/typedef.cpp -o dist/typedef
+
+  # src/arithmetic.cpp
+  clang++ src/arithmetic.cpp -o dist/arithmetic
+
+  # src/typeconversion.cpp
+  clang++ src/typeconversion.cpp -o dist/typeconversion
+
+  # src/input.cpp
+  clang++ src/input.cpp -o dist/input
+
+  # src/math.cpp
+  clang++ src/math.cpp -o dist/math
+
+  # src/projects/hypotenuse.cpp
+  clang++ src/projects/hypotenuse.cpp -o dist/projects/hypotenuse
+
+  # src/if.cpp
+  clang++ src/if.cpp -o dist/ifc
+
+  # src/switch.cpp
+  clang++ src/switch.cpp -o dist/switch
+
+  # src/projects/tcalc.cpp
+  clang++ src/projects/tcalc.cpp -o dist/projects/tcalc
+
+  # src/ternary.cpp
+  clang++ src/ternary.cpp -o dist/ternary
+
+  echo ""
   echo "Compiled all programs."
   echo ""
 }
@@ -22,6 +54,7 @@ compile() {
 main() {
   # Make the dist directory
   mkdir -p dist
+  mkdir -p dist/projects
 
   compile 
 }
