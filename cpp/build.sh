@@ -55,6 +55,18 @@ compile() {
   # src/string.cpp
   clang++ src/string.cpp -o dist/string
 
+  # src/while.cpp
+  clang++ src/while.cpp -o dist/whilel
+
+  # src/for.cpp
+  clang++ src/for.cpp -o dist/forl
+
+  # src/loops.cpp
+  clang++ src/loops.cpp -o dist/loops
+
+  # src/projects/rectangleloop.cpp
+  clang++ src/projects/rectangleloop.cpp -o dist/projects/rectangleloop
+
   echo ""
   echo "Compiled all programs."
   echo ""
