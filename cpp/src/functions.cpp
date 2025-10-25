@@ -5,11 +5,6 @@
 
 using std::string;
 using std::cout;
-using std::cin;
-
-void n() {
-  cout << '\n';
-}
 
 void happyBirthday(int age, string name = "you") {
   cout << "Happy Birthday to " << name << "!\n";
