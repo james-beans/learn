@@ -76,6 +76,12 @@ compile() {
   # src/projects/gtn.cpp
   clang++ src/projects/gtn.cpp -o dist/projects/gtn
 
+  # src/functions.cpp
+  clang++ src/functions.cpp -o dist/functions
+
+  # src/examples/functions/greetage.cpp
+  clang++ src/examples/functions/greetage.cpp -o dist/examples/functions/greetage
+
   echo ""
   echo "Compiled all programs."
   echo ""
@@ -84,9 +90,24 @@ compile() {
 main() {
   clear
 
+  # Check if the 'dist' folder exists and then safely delete contents using find.
+	if [ -d "dist" ]; then
+	  echo "Safely removing existing 'dist' directory contents..."
+	  # 1. Recursively delete everything *inside* the 'dist' directory.
+	  #    -mindepth 1 ensures we only target contents, not 'dist' itself.
+	  find dist -mindepth 1 -delete
+
+	  # 2. Remove the now (hopefully) empty 'dist' directory using the safer rmdir.
+	  #    The '|| true' ensures the script doesn't crash if rmdir fails (e.g., if files remain).
+	  rmdir dist 2>/dev/null || true
+  fi
+
   # Make the dist directory
   mkdir -p dist
+  mkdir -p dist/examples
   mkdir -p dist/projects
+
+  mkdir -p dist/examples/functions
 
   compile 
 }
