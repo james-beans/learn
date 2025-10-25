@@ -1,4 +1,4 @@
-// 11:55 - 25/10/25
+// 14:05 - 25/10/25
 // James-Beans - Learning C++
 
 #include <iostream>
@@ -22,8 +22,6 @@ int main() {
   std::cout << "Enter your name: ";
   getline(cin >> ws, name);
 
-  n();
-
   if (name.empty()) {
     cout << "You didn't enter your name.\n";
     return 1;
@@ -35,8 +33,25 @@ int main() {
     cout << "Nice name!\n";
   }
 
+  n();
+
   name.append("@Archlinux");
   cout << "Your username is now `" << name << "`.\n";
+
+  // String is essentially just an array of characters.
+  // 0 is the first character, and then it goes up.
+  cout << name.at(0) << '\n';
+
+  // Add a character at any point in the string
+  name.insert(0, "@");
+  cout << name << '\n';
+
+  // Find any specific characters at any point in a string
+  cout << name.find('@') << '\n';
+
+  // Remove amount of characters in string
+  name.erase(0, 6);
+  cout << name << '\n';
 
   name.clear();
   cout << "Hello, " << name << '\n';
