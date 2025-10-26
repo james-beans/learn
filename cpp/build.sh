@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+n() {
+  echo ""
+}
+
 compile() {
   # src/hw.cpp
   clang++ src/hw.cpp -o dist/hw
@@ -82,9 +86,13 @@ compile() {
   # src/examples/functions/greetage.cpp
   clang++ src/examples/functions/greetage.cpp -o dist/examples/functions/greetage
 
-  echo ""
-  echo "Compiled all programs."
-  echo ""
+  # src/return.cpp
+  clang++ src/return.cpp -o dist/returning
+
+  # src/projects/bp.cpp
+  clang++ src/projects/bp.cpp -o dist/projects/bp
+
+  n && echo "Compiled all programs." && n
 }
 
 main() {
@@ -101,6 +109,8 @@ main() {
 	  #    The '|| true' ensures the script doesn't crash if rmdir fails (e.g., if files remain).
 	  rmdir dist 2>/dev/null || true
   fi
+
+  n
 
   # Make the dist directory
   mkdir -p dist

@@ -1,4 +1,4 @@
-// 23:55 - 25/10/25
+// 01:35 - 26/10/25
 // James-Beans - Learning C++
 
 #include <iostream>
@@ -13,6 +13,18 @@ void happyBirthday(int age, string name = "you") {
   cout << "Happy Birthday to " << name << "!\n\n";
   cout << "You are " << age << " years old.\n";
 }
+
+void bakePizza() {
+  cout << "Here is your pizza!\n";
+}
+void bakePizza(string topping1) {
+  cout << "Here is your special, " << topping1 << " pizza!\n";
+}
+void bakePizza(string topping1, string topping2) {
+  cout << "Here is your extra special, " << topping1 << " and " << topping2 << " pizza!\n";
+}
+
+void n();
 
 int main() {
   // -- Section 1:
@@ -99,6 +111,32 @@ int main() {
    *
    */
 
+  // -- Section 2:
+  cout << "\n-- Section 2:\n";
+
+  /*
+   * Overloaded functions are different versions
+   * of the same function.
+   *
+   * Since in C++ you can have 2 different function
+   * declarations with the same name and it just uses
+   * the first one, you can make optional arguments
+   * without a default if you just make one function
+   * without arguments and the other with the same name
+   * but different arguments and logic. It should also
+   * work perfectly fine.
+   *
+   * See the `bakePizza();` function implementations
+   * above.
+   */
+  bakePizza();
+  bakePizza("pepperoni");
+  bakePizza("pepperoni", "mushroom");
+
   return 0;
+}
+
+void n() {
+  cout << '\n';
 }
 
