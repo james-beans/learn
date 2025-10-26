@@ -1,25 +1,12 @@
-// 00:50 - 24/10/25
+// 19:20 - 26/10/25
 // James-Beans - Learning C++
 
-// Both versions work.
-// This is the standard (way faster) C impl:
-//
-//#include <stdio.h>
-//
-//int main() {
-//  printf("Hello, World!\n");
-//  return 0;
-//}
-//
-// This is the C++ impl without using a namespace (slower than C):
-
 #include <iostream>
-//using namespace std;
+
+using std::cout;
 
 int main() {
-//  cout << "Hello, World!" << endl;
-//  std::cout << "Hello, World!" << std::endl;
-  std::cout << "Hello, World!\n";
+  cout << "Hello, World!\n";
   return 0;
 }
 

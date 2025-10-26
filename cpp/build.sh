@@ -5,11 +5,14 @@ n() {
 }
 
 compile() {
+  # src/0_template.cpp
+  clang++ src/0_template.cpp -o dist/template
+
+  # src/projects/0_template.cpp
+  clang++ src/projects/0_template.cpp -o dist/projects/template
+
   # src/hw.cpp
   clang++ src/hw.cpp -o dist/hw
-
-  # src/hwcpp.cpp
-  clang++ src/hwcpp.cpp -o dist/hwcpp
 
   # src/vars.cpp
   clang++ src/vars.cpp -o dist/vars
