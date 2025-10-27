@@ -6,94 +6,103 @@ n() {
 
 compile() {
   # src/0_template.cpp
-  clang++ src/0_template.cpp -o dist/template
+  clang++ -std=c++23 src/0_template.cpp -o dist/template
 
   # src/projects/0_template.cpp
-  clang++ src/projects/0_template.cpp -o dist/projects/template
+  clang++ -std=c++23 src/projects/0_template.cpp -o dist/projects/template
 
   # src/hw.cpp
-  clang++ src/hw.cpp -o dist/hw
+  clang++ -std=c++23 src/hw.cpp -o dist/hw
 
   # src/vars.cpp
-  clang++ src/vars.cpp -o dist/vars
+  clang++ -std=c++23 src/vars.cpp -o dist/vars
 
   # src/const.cpp
-  clang++ src/const.cpp -o dist/const
+  clang++ -std=c++23 src/const.cpp -o dist/const
 
   # src/namespaces.cpp
-  clang++ src/namespaces.cpp -o dist/namespaces
+  clang++ -std=c++23 src/namespaces.cpp -o dist/namespaces
 
   # src/typedef.cpp
-  clang++ src/typedef.cpp -o dist/typedef
+  clang++ -std=c++23 src/typedef.cpp -o dist/typedef
 
   # src/arithmetic.cpp
-  clang++ src/arithmetic.cpp -o dist/arithmetic
+  clang++ -std=c++23 src/arithmetic.cpp -o dist/arithmetic
 
   # src/typeconversion.cpp
-  clang++ src/typeconversion.cpp -o dist/typeconversion
+  clang++ -std=c++23 src/typeconversion.cpp -o dist/typeconversion
 
   # src/input.cpp
-  clang++ src/input.cpp -o dist/input
+  clang++ -std=c++23 src/input.cpp -o dist/input
 
   # src/math.cpp
-  clang++ src/math.cpp -o dist/math
+  clang++ -std=c++23 src/math.cpp -o dist/math
 
   # src/projects/hypotenuse.cpp
-  clang++ src/projects/hypotenuse.cpp -o dist/projects/hypotenuse
+  clang++ -std=c++23 src/projects/hypotenuse.cpp -o dist/projects/hypotenuse
 
   # src/if.cpp
-  clang++ src/if.cpp -o dist/ifc
+  clang++ -std=c++23 src/if.cpp -o dist/ifc
 
   # src/switch.cpp
-  clang++ src/switch.cpp -o dist/switch
+  clang++ -std=c++23 src/switch.cpp -o dist/switch
 
   # src/projects/tcalc.cpp
-  clang++ src/projects/tcalc.cpp -o dist/projects/tcalc
+  clang++ -std=c++23 src/projects/tcalc.cpp -o dist/projects/tcalc
 
   # src/ternary.cpp
-  clang++ src/ternary.cpp -o dist/ternary
+  clang++ -std=c++23 src/ternary.cpp -o dist/ternary
 
   # src/operators.cpp
-  clang++ src/operators.cpp -o dist/operators
+  clang++ -std=c++23 src/operators.cpp -o dist/operators
 
   # src/projects/convertemp.cpp
-  clang++ src/projects/convertemp.cpp -o dist/projects/convertemp
+  clang++ -std=c++23 src/projects/convertemp.cpp -o dist/projects/convertemp
 
   # src/string.cpp
-  clang++ src/string.cpp -o dist/string
+  clang++ -std=c++23 src/string.cpp -o dist/string
 
   # src/while.cpp
-  clang++ src/while.cpp -o dist/whilel
+  clang++ -std=c++23 src/while.cpp -o dist/whilel
 
   # src/for.cpp
-  clang++ src/for.cpp -o dist/forl
+  clang++ -std=c++23 src/for.cpp -o dist/forl
 
   # src/loops.cpp
-  clang++ src/loops.cpp -o dist/loops
+  clang++ -std=c++23 src/loops.cpp -o dist/loops
 
   # src/projects/rectangleloop.cpp
-  clang++ src/projects/rectangleloop.cpp -o dist/projects/rectangleloop
+  clang++ -std=c++23 src/projects/rectangleloop.cpp -o dist/projects/rectangleloop
 
   # src/random.cpp
-  clang++ src/random.cpp -o dist/random
+  clang++ -std=c++23 src/random.cpp -o dist/random
 
   # src/projects/reg.cpp
-  clang++ src/projects/reg.cpp -o dist/projects/reg
+  clang++ -std=c++23 src/projects/reg.cpp -o dist/projects/reg
 
   # src/projects/gtn.cpp
-  clang++ src/projects/gtn.cpp -o dist/projects/gtn
+  clang++ -std=c++23 src/projects/gtn.cpp -o dist/projects/gtn
 
   # src/functions.cpp
-  clang++ src/functions.cpp -o dist/functions
+  clang++ -std=c++23 src/functions.cpp -o dist/functions
 
   # src/examples/functions/greetage.cpp
-  clang++ src/examples/functions/greetage.cpp -o dist/examples/functions/greetage
+  clang++ -std=c++23 src/examples/functions/greetage.cpp -o dist/examples/functions/greetage
 
   # src/return.cpp
-  clang++ src/return.cpp -o dist/returning
+  clang++ -std=c++23 src/return.cpp -o dist/returning
 
   # src/projects/bp.cpp
-  clang++ src/projects/bp.cpp -o dist/projects/bp
+  clang++ -std=c++23 src/projects/bp.cpp -o dist/projects/bp
+
+  # src/projects/rps.cpp
+  clang++ -std=c++23 src/projects/rps.cpp -o dist/projects/rps
+
+  # src/arrays.cpp
+  clang++ -std=c++23 src/arrays.cpp -o dist/arrays
+
+  # src/sizeof.cpp
+  clang++ -std=c++23 src/sizeof.cpp -o dist/sizeof
 
   n && echo "Compiled all programs." && n
 }

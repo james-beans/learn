@@ -9,7 +9,7 @@
 ---
 
 ## Credits
-1. [C++ Full Course for free ⚡](https://www.youtube.com/watch?v=-TkoO8Z07hI) - `2:38:05`
+1. [C++ Full Course for free ⚡](https://www.youtube.com/watch?v=-TkoO8Z07hI) - `3:13:07`
 
 ---
 
