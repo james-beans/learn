@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinder Coals | Virtual Browser</title>
+    <style>
+        :root {
+            --coals-bg: #c0c0c0;
+            --coals-border-color: #000000;
+            --coals-text-color: #000000;
+            --coals-link-color: #0000ee;
+            --coals-font-family: 'Courier New', Courier, monospace;
+            --coals-tab-height: 32px;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        /* Custom scrollbar for that legacy feel */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--coals-bg); }
+        ::-webkit-scrollbar-thumb { background: #888; border: 1px solid #000; }
+    </style>
+</head>
+<body>
+
+    <div id="cinder-viewport"></div>
+
+    <script type="module">
+        import { ignite } from './coals.js';
+
+        const myNetwork = {
+            "metadata": {
+                "name": "THE_SHADOW_NET",
+                "social": "https://github.com/cinder-sdk"
+            },
+            "pages": [
+                { 
+                    "name": "Home", 
+                    "url": "data:text/html;base64,PGJvZHkgc3R5bGU9ImJhY2tncm91bmQ6IzFhMWExYTtjb2xvcjojMDBmZjAwO3BhZGRpbmc6MjBweDtmb250LWZhbWlseTptb25vc3BhY2U7Ij48aDE+SE9NRSBTQ1JFRU48L2gxPjxwPldlbGNvbWUgdG8gdGhlIFNoYWRvdyBOZXQuIFlvdXIgY29ubmVjdGlvbiBpcyBzZWN1cmUuPC9wPjwvYm9keT4=",
+                    "path": "coals://home"
+                },
+                { 
+                    "name": "Terminal", 
+                    "url": "data:text/html;base64,PGJvZHkgc3R5bGU9ImJhY2tncm91bmQ6IzAwMDtjb2xvcjojMGYwO3BhZGRpbmc6MjBweDtmb250LWZhbWlseTptb25vc3BhY2U7Ij48aDE+VEVSTUlOQUw8L2gxPjxwPkF3YWl0aW5nIGNvbW1hbmQuLi48L3A+PC9ib2R5Pg==" 
+                },
+                { "name": "Indie Web Log", "url": "https://example.com" },
+                { "name": "Guitar Progress", "url": "data:text/html;charset=utf-8,<h1>0-3-5 Log</h1><p>Day 180: Still sounds like a dying cat.</p>" },
+                { 
+                    "name": "Error", 
+                    "url": "data:text/html;charset=utf-8,<body style='background:#f00;color:#fff;font-family:monospace;padding:20px;'><h1>404 - PAGE NOT FOUND</h1><p>The requested virtual path does not exist in the manifest.</p></body>",
+                    "path": "coals://error"
+                }
+            ]
+        };
+
+        ignite({
+            id: 'cinder-viewport',
+            description: "your new home",
+            pages: myNetwork,
+            settings: {
+                forceFullscreen: true
+            }
+        });
+    </script>
+</body>
+</html>
+
