@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-n() {
-  echo ""
-}
+n() { echo ""; }
 
 compile() {
   # src/0_template.cpp
@@ -104,6 +102,9 @@ compile() {
   # src/sizeof.cpp
   clang++ -std=c++23 src/sizeof.cpp -o dist/sizeof
 
+  # src/templates.cpp
+  clang++ -std=c++23 src/templates.cpp -o dist/templates
+
   n && echo "Compiled all programs." && n
 }
 
@@ -111,15 +112,15 @@ main() {
   clear
 
   # Check if the 'dist' folder exists and then safely delete contents using find.
-	if [ -d "dist" ]; then
-	  echo "Safely removing existing 'dist' directory contents..."
-	  # 1. Recursively delete everything *inside* the 'dist' directory.
-	  #    -mindepth 1 ensures we only target contents, not 'dist' itself.
-	  find dist -mindepth 1 -delete
+  if [ -d "dist" ]; then
+    echo "Safely removing existing 'dist' directory contents..."
+    # Recursively delete everything *inside* the 'dist' directory.
+    # -mindepth 1 ensures we only target contents, not 'dist' itself.
+    find dist -mindepth 1 -delete
 
-	  # 2. Remove the now (hopefully) empty 'dist' directory using the safer rmdir.
-	  #    The '|| true' ensures the script doesn't crash if rmdir fails (e.g., if files remain).
-	  rmdir dist 2>/dev/null || true
+    # Remove the now (hopefully) empty 'dist' directory using the safer rmdir.
+    # The '|| true' ensures the script doesn't crash if rmdir fails (e.g., if files remain).
+    rmdir dist 2>/dev/null || true
   fi
 
   n
@@ -135,4 +136,3 @@ main() {
 }
 
 main
-
