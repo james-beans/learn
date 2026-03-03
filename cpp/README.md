@@ -16,6 +16,5 @@
 ## Compile
 Unix environments:
 ```bash
-clear && ./build.sh && ls dist
+./build.sh && ls dist
 ```
-
