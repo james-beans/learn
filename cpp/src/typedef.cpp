@@ -10,6 +10,9 @@ using std::string;
 using std::vector;
 using std::pair;
 
+#include "0_common.h"
+using namespace c;
+
 // typedef is a reserved keyword used to create
 // an additional name (alias for another data type.
 //
@@ -43,7 +46,7 @@ typedef unsigned int coun_t; // alias for representing the count of items in a c
 
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   // Instead of writing:
   // `vector<pair<string, int>> pairlist;`
@@ -69,7 +72,7 @@ int main() {
   cout << age << '\n';
 
   // -- Section 1 - Assignment:
-  cout << "\n-- Section 1 - Assignment:\n";
+  section(1, "Assignment");
 
   // Instead of writing:
   // `unsigned int inventory_count = 50;`
@@ -81,4 +84,3 @@ int main() {
 
   return 0;
 }
-

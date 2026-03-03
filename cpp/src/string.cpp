@@ -9,13 +9,12 @@ using std::cout;
 using std::cin;
 using std::ws;
 
-void n() {
-  cout << '\n';
-}
+#include "0_common.h"
+using namespace c;
 
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   string name;
 
@@ -58,4 +57,3 @@ int main() {
 
   return 0;
 }
-

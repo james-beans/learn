@@ -5,13 +5,12 @@
 
 using std::cout;
 
-void n() {
-  cout << '\n';
-}
+#include "0_common.h"
+using namespace c;
 
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   /*
    * There are multiple different types of loops.
@@ -44,7 +43,7 @@ int main() {
   }
 
   // -- Section 2:
-  cout << "\n-- Section 2:\n";
+  section(2);
 
   /*
    * A nested loop is just a loop that's inside of another
@@ -89,4 +88,3 @@ int main() {
 
   return 0;
 }
-

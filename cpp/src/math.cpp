@@ -20,9 +20,12 @@ using std::min; // Minimum
 // `ceil(a)` - rounds a up
 // `floor(a)` - rounds a down
 
+#include "0_common.h"
+using namespace c;
+
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   double x = 3.14;
   //double x = 3;
@@ -42,4 +45,3 @@ int main() {
 
   return 0;
 }
-

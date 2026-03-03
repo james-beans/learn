@@ -3,6 +3,9 @@
 
 #include <iostream>
 
+#include "0_common.h"
+using namespace c;
+
 // Namespaces provide a solution for preventing
 // name conflicts in large C++ projects. Each
 // entity needs a unique name.
@@ -49,4 +52,3 @@ int main() {
 
   return 0;
 }
-

@@ -5,13 +5,12 @@
 
 using std::cout;
 
-void n() {
-  cout << '\n';
-}
+#include "0_common.h"
+using namespace c;
 
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   // A ternary operator (`?:`) is a
   // replacement to an if/else if/else
@@ -59,4 +58,3 @@ int main() {
 
   return 0;
 }
-

@@ -3,6 +3,11 @@
 
 #include <iostream>
 
+using std::cout;
+
+#include "0_common.h"
+using namespace c;
+
 int main() {
   // const makes it so that
   // people can't change the
@@ -16,24 +21,24 @@ int main() {
   const double PI = 3.14159;
 
   // -- Section 1:
-  std::cout << "\n-- Section 1:\n";
+  section(1);
 
   double radius = 10;
   double circumference = 2 * PI * radius;
 
-  std::cout << circumference << "cm\n";
+  cout << circumference << "cm\n";
 
   // -- Section 2:
-  std::cout << "\n-- Section 2:\n";
+  section(2);
 
   const int LIGHT_SPEED = 299792458;
   const int WIDTH = 1920;
   const int HEIGHT = 1080;
 
-  std::cout << "The screen size may be " << WIDTH << " * " << HEIGHT << " .\n";
+  cout << "The screen size may be " << WIDTH << " * " << HEIGHT << " .\n";
 
   // -- Section 2 - Assignment:
-  std::cout << "\n-- Section 2 - Assignment:\n";
+  section(2, "Assignment");
 
   const bool POWER = true;
   std::string powerstate;
@@ -46,8 +51,7 @@ int main() {
     powerstate = "isn't";
   }
 
-  std::cout << "The power in the building " << powerstate << " on.\n";
+  cout << "The power in the building " << powerstate << " on.\n";
 
   return 0;
 }
-

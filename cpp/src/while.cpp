@@ -16,18 +16,17 @@ using std::this_thread::sleep_for;
 using std::chrono::milliseconds;
 using std::chrono::seconds;
 
-void n() {
-  cout << '\n';
-}
+#include "0_common.h"
+using namespace c;
 
 void s(int ms) {
-    // Pause the thread for 'ms' milliseconds
-    sleep_for(milliseconds(ms));
+  // Pause the thread for 'ms' milliseconds
+  sleep_for(milliseconds(ms));
 }
 
 int main(void) {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   string name;
 
@@ -63,7 +62,7 @@ int main(void) {
   }
 
   // -- Section 2:
-  cout << "\n-- Section 2:\n";
+  section(2);
 
   /*
    * A `do while` loop does a block of code
@@ -88,4 +87,3 @@ int main(void) {
 
   return 0;
 }
-

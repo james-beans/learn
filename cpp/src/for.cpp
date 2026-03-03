@@ -6,7 +6,8 @@
 using std::string;
 using std::cout;
 
-void n();
+#include "0_common.h"
+using namespace c;
 
 namespace count {
   // Count - print (p)
@@ -80,7 +81,7 @@ namespace fe {
 
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   /*
    * For simplicity reasons, we are
@@ -157,7 +158,7 @@ int main() {
   count::d(10, 0, 2);
 
   // -- Section 2:
-  cout << "\n-- Section 2:\n";
+  section(2);
 
   /*
    * A `foreach` loop is a loop that eases
@@ -173,8 +174,3 @@ int main() {
 
   return 0;
 }
-
-void n() {
-  cout << '\n';
-}
-

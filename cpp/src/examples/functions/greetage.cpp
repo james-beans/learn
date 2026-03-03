@@ -10,14 +10,11 @@
 using std::string;
 using std::cout;
 
-void greetage(string name = "user", int age = 20);
-
-int main() {
-  greetage("James", 20);
-}
-
-void greetage(string name, int age) {
+void greetage(string name = "user", int age = 20) {
   cout << "Hello, " << name << "!\n";
   cout << "You are " << age << " years old.\n";
 }
 
+int main() {
+  greetage("James", 20);
+}

@@ -9,13 +9,12 @@ using std::cout;
 using std::cin; // Doesn't allow whitespaces in input by itself
 using std::ws;
 
-void n() {
-  cout << '\n';
-}
+#include "0_common.h"
+using namespace c;
 
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";  
+  section(1);
 
   // `std::cout <<` (`cout`) is the way to print (insertion operator)
   // `std::cin >>` (`cin`) is the way to take input (extraction operator)
@@ -38,4 +37,3 @@ int main() {
 
   return 0;
 }
-

@@ -6,13 +6,12 @@
 using std::cout;
 using std::cin;
 
-void n() {
-  cout << '\n';
-}
+#include "0_common.h"
+using namespace c;
 
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   /* - Arithmetic operators (maths)
    * are the result of a specific
@@ -91,4 +90,3 @@ int main() {
 
   return 0;
 }
-

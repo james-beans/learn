@@ -8,6 +8,9 @@ using std::string;
 using std::cout;
 using std::cin;
 
+#include "0_common.h"
+using namespace c;
+
 namespace pr {
   int num(int a, int b, bool print = false, string end = "\n") {
     // PUT THIS ONLY AT THE START OF MAIN TO USE:
@@ -29,15 +32,11 @@ namespace pr {
   }
 }
 
-void n() {
-  cout << '\n';
-}
-
 int main() {
   srand(time(NULL));
 
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   /*
    * Pseudo-random is NOT truly random but very close

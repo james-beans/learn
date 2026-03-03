@@ -6,6 +6,9 @@
 using std::string;
 using std::cout;
 
+#include "0_common.h"
+using namespace c;
+
 double square(double length) {
   return length * length;
 }
@@ -18,11 +21,9 @@ string concatStrings(string st1, string st2) {
   return st1 + " " + st2;
 }
 
-void n();
-
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   /*
    * The return keyword will return a value
@@ -48,8 +49,3 @@ int main() {
 
   return 0;
 }
-
-void n() {
-  cout << '\n';
-}
-

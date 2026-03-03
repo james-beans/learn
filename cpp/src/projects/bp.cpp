@@ -30,11 +30,11 @@ namespace b {
     cout << "Enter amount to be deposited: ";
 
     if (!(cin >> amount)) {
-			cout << "Invalid input. Please enter a valid number.\n\n";
-			cin.clear();
-			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard bad input
-			return 0;
-		}
+      cout << "Invalid input. Please enter a valid number.\n\n";
+      cin.clear();
+      cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard bad input
+      return 0;
+    }
 
     if (amount > 0) {
       return amount;
@@ -51,11 +51,11 @@ namespace b {
     cin >> amount;
 
     if (!(cin >> amount)) {
-			cout << "Invalid input. Please enter a valid number.\n\n";
-			cin.clear();
-			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard bad input
-			return 0;
-		}
+      cout << "Invalid input. Please enter a valid number.\n\n";
+      cin.clear();
+      cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard bad input
+      return 0;
+    }
 
     if (amount > 0) {
       if (amount <= balance) {
@@ -92,13 +92,13 @@ int main() {
 
     cout << "Selection: ";
     if (!(cin >> choice)) {
-			cout << "Invalid selection. Please enter a number (1-4).\n";
-			cin.clear();
-			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard bad input
-			choice = 0; // Set to a default value
-			n();
-			continue; // Skip the switch and re-prompt the menu
-		}
+      cout << "Invalid selection. Please enter a number (1-4).\n";
+      cin.clear();
+      cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Discard bad input
+      choice = 0; // Set to a default value
+      n();
+      continue; // Skip the switch and re-prompt the menu
+    }
 
     switch (choice) {
       case 1:

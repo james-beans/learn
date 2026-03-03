@@ -5,9 +5,12 @@
 
 using std::cout;
 
+#include "0_common.h"
+using namespace c;
+
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";  
+  section(1);
 
   // Type conversion (casting) is the conversion of a
   // value of one data type to another data type.

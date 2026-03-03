@@ -7,13 +7,12 @@ using std::string;
 using std::cout;
 using std::cin;
 
-void n() {
-  cout << "\n";
-}
+#include "0_common.h"
+using namespace c;
 
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   int month;
   string monthName;
@@ -108,7 +107,7 @@ int main() {
   cout << "It is " << monthName << ".\n";
 
   // -- Section 2:
-  cout << "\n-- Section 2:\n";
+  section(2);
 
   char grade;
 
@@ -145,4 +144,3 @@ int main() {
 
   return 0;
 }
-

@@ -6,9 +6,12 @@
 using std::string;
 using std::cout;
 
+#include "0_common.h"
+using namespace c;
+
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   /*
    * The sizeof operator determines the
@@ -49,4 +52,3 @@ int main() {
 
   return 0;
 }
-

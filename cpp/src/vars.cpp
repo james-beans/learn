@@ -6,6 +6,9 @@
 using std::string;
 using std::cout;
 
+#include "0_common.h"
+using namespace c;
+
 int n2 = 3;
 
 void printN1(int n1) {
@@ -20,7 +23,7 @@ void n();
 
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   // Combine with: int x = 5;
   int x; // Declare a variable
@@ -33,7 +36,7 @@ int main() {
   cout << sum << "\n";
 
   // -- Section 2:
-  cout << "\n-- Section 2:\n";
+  section(2);
 
   // Types:
   // - integer (whole number)
@@ -93,7 +96,7 @@ int main() {
   cout << "You are " << age << " years old.\n";
 
   // -- Section 2 - Assignment:
-  cout << "\n-- Section 2 - Assignment:\n";
+  section(2, "Assignment");
 
   int week = 7; // days
   double burger = 5.99;
@@ -144,8 +147,3 @@ int main() {
 
   return 0;
 }
-
-void n() {
-  cout << '\n';
-}
-

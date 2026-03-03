@@ -6,6 +6,9 @@
 using std::string;
 using std::cout;
 
+#include "0_common.h"
+using namespace c;
+
 void happyBirthday(int age, string name = "you") {
   cout << "Happy Birthday to " << name << "!\n";
   cout << "Happy Birthday to " << name << "!\n";
@@ -24,11 +27,9 @@ void bakePizza(string topping1, string topping2) {
   cout << "Here is your extra special, " << topping1 << " and " << topping2 << " pizza!\n";
 }
 
-void n();
-
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   /*
    * A function is a block of reusable code
@@ -112,7 +113,7 @@ int main() {
    */
 
   // -- Section 2:
-  cout << "\n-- Section 2:\n";
+  section(2);
 
   /*
    * Overloaded functions are different versions
@@ -135,8 +136,3 @@ int main() {
 
   return 0;
 }
-
-void n() {
-  cout << '\n';
-}
-

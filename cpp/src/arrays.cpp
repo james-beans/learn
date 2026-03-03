@@ -6,6 +6,9 @@
 using std::string;
 using std::cout;
 
+#include "0_common.h"
+using namespace c;
+
 double getTotal(double prices[], int size) {
   double total = 0;
 
@@ -16,11 +19,9 @@ double getTotal(double prices[], int size) {
   return total;
 }
 
-void n();
-
 int main() {
   // -- Section 1:
-  cout << "\n-- Section 1:\n";
+  section(1);
 
   /*
    * An array is a data structure that can hold
@@ -144,7 +145,7 @@ int main() {
   cout << prices[3] << '\n';
 
   // -- Section 2:
-  cout << "\n-- Section 2:\n";
+  section(2);
 
   /*
    * Iterating over arrays will tell us
@@ -187,7 +188,7 @@ int main() {
   }
 
   // -- Section 3:
-  cout << "\n-- Section 3:\n";
+  section(3);
 
   double pricesf[] = {49.99, 15.05, 75, 9.99};
   int size = sizeof(prices) / sizeof(prices[0]);
@@ -197,8 +198,3 @@ int main() {
 
   return 0;
 }
-
-void n() {
-  cout << '\n';
-}
-
