@@ -19,8 +19,6 @@ void printN2() {
   cout << n2 << '\n';
 }
 
-void n();
-
 int main() {
   // -- Section 1:
   section(1);
