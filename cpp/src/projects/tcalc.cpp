@@ -1,6 +1,3 @@
-// 04:05 - 25/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 #include <cmath>
 

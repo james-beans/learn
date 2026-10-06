@@ -1,6 +1,3 @@
-// 19:05 - 26/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 #include <iomanip>
 #include <limits>
@@ -82,7 +79,7 @@ int main() {
   double depositAmount;
   double withdrawAmount;
 
-  do { 
+  do {
     cout << "1. Show Balance\n";
     cout << "2. Deposit Money\n";
     cout << "3. Withdraw Money\n";

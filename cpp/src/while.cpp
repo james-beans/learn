@@ -1,6 +1,3 @@
-// 15:00 - 25/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 #include <string>
 
@@ -49,10 +46,10 @@ int main(void) {
    }
    */
   // We do a timed loop here instead:
-  
+
   // Get the starting time point
   auto start_time = std::chrono::steady_clock::now();
-    
+
   // Define the target end time (Start time + 5 seconds)
   auto end_time = start_time + seconds(5);
 

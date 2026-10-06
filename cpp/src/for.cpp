@@ -1,6 +1,3 @@
-// 00:30 - 27/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 
 using std::string;
@@ -98,7 +95,7 @@ int main() {
 
   /*
   for (int i = 1; i <= 3; i++) {
-    cout << "Happy new year!\n"; 
+    cout << "Happy new year!\n";
   }
   */
   count::p(3, "Happy new year!");
@@ -107,7 +104,7 @@ int main() {
 
   /*
   for (int i = 1; i <= 5; i++) {
-    cout << "Happy new year!\n"; 
+    cout << "Happy new year!\n";
   }
   */
   count::p(5, "Happy new year!");
@@ -138,7 +135,7 @@ int main() {
   }
   */
   count::i(0, 10, 3);
-  
+
   n();
 
   /*

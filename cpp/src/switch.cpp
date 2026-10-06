@@ -1,6 +1,3 @@
-// 03:45 - 25/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 
 using std::string;
@@ -58,7 +55,7 @@ int main() {
     cout << "You didn't enter a number between 1-12.\n";
   }
 
-   * 
+   *
    * Instead use a switch statement like this instead:
   */
 

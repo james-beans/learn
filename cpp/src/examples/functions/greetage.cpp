@@ -1,6 +1,3 @@
-// 23:55 - 25/10/25
-// James-Beans - Learning C++
-//
 // This file comes from the `src/functions.cpp`
 // file comment example. For more about functions,
 // check that file (`src/functions.cpp`) instead.

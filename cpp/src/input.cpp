@@ -1,6 +1,3 @@
-// 01:05 - 25/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 
 using std::getline; // Allows whitespaces in input from `cin`
@@ -18,7 +15,7 @@ int main() {
 
   // `std::cout <<` (`cout`) is the way to print (insertion operator)
   // `std::cin >>` (`cin`) is the way to take input (extraction operator)
-  
+
   string name;
   int age;
 

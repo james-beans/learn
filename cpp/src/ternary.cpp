@@ -1,6 +1,3 @@
-// 04:35 - 25/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 
 using std::cout;

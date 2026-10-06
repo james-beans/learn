@@ -1,6 +1,3 @@
-// 02:35 - 25/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 
 using std::cout;
@@ -40,7 +37,7 @@ int main() {
     cout << "It's very impressive.\n\n";
     cout << "Welcome to the terminal.\n"; // Still let them in
   } else if (age >= 13) {
-    cout << "Welcome to the terminal!\n";  
+    cout << "Welcome to the terminal!\n";
   } else {
     cout << "You are not old enough to enter!\n";
     cout << "Come back when you are old enough.\n";

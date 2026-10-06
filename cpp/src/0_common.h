@@ -16,13 +16,13 @@ namespace c {
     cout << "\n-- Section " << num << ":\n";
   }
 
-  // 2: Number and a Title (The Overload)
+  // 2: Number and a title
   // Usage: c::section(2, "Assignment");
   inline void section(int num, string title) {
     cout << "\n-- Section " << num << " - " << title << ":\n";
   }
 
-  // 3: Just a string title (If you ever need it)
+  // 3: Just a string title
   inline void section(string title) {
     cout << "\n-- Section " << title << ":\n";
   }

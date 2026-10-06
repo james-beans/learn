@@ -1,6 +1,3 @@
-// 19:25 - 26/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 
 using std::string;
@@ -22,7 +19,7 @@ int main() {
   string name = "James"; // 32 bytes: stores the location to the actual string data
   double gpa = 2.5; // 8 bytes
   char grade = 'F'; // 1 byte: a single character
-  bool student = true; // 1 byte: a single true/false value 
+  bool student = true; // 1 byte: a single true/false value
 
   cout << sizeof(name) << " bytes\n";
   cout << sizeof(gpa) << " bytes\n";
@@ -43,7 +40,7 @@ int main() {
    * by the type of the array with the
    * `sizeof();` function encasing both
    * of them when being divided.
-   * 
+   *
    * Here's an example:
    */
   cout << sizeof(grades) / sizeof(char) << " elements\n";

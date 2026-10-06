@@ -1,6 +1,3 @@
-// 00:45 - 25/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 
 using std::cout;
@@ -15,7 +12,7 @@ int main() {
   // Arithmetic operators (maths) are the result
   // of a specific arithmetic operation (`+`, `-`,
   // `*`, `/`).
-  
+
   int students = 20;
   //double students = 20;
 
@@ -24,11 +21,11 @@ int main() {
   //students = students + 1;
   //students += 1;
   //students++;
-  
+
   //students = students - 1;
   //students -= 1;
   //students--;
-  
+
   //students = students * 2;
   //students*=2;
 

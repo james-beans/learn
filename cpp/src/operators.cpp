@@ -1,6 +1,3 @@
-// 05:25 - 25/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 
 using std::cout;
@@ -19,17 +16,17 @@ int main() {
    * (`+`, `-`, `*`, `/`)
    *
    * example:
-  
+
      double students = 20;
 
      students = students + 1;
      students += 1;
      students++;
-  
+
      students = students - 1;
      students -= 1;
      students--;
-  
+
      students = students * 2;
      students*=2;
 

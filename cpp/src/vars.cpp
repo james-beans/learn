@@ -1,6 +1,3 @@
-// 01:50 - 26/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 
 using std::string;
@@ -39,7 +36,7 @@ int main() {
   // Types:
   // - integer (whole number)
   int age = 20;
-  int year = 2025; 
+  int year = 2025;
   int days = 7;
 
   // - WARNING (clang++):

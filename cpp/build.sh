@@ -132,7 +132,7 @@ main() {
 
   mkdir -p dist/examples/functions
 
-  compile 
+  compile
 }
 
 main

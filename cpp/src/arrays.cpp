@@ -1,6 +1,3 @@
-// 00:50 - 27/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 
 using std::string;

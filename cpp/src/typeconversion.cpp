@@ -1,6 +1,3 @@
-// 01:05 - 25/10/25
-// James-Beans - Learning C++
-
 #include <iostream>
 
 using std::cout;
@@ -17,7 +14,7 @@ int main() {
   //
   // Implicit = automatic
   // Explicit = Precede value with new data type (int)
-  
+
   // Truncated decimal portion without conversion/cast
   // to a different type that supports decimals.
   double a = (int) 3.14;
