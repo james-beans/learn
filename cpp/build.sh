@@ -6,9 +6,6 @@ compile() {
   # src/0_template.cpp
   clang++ -std=c++23 src/0_template.cpp -o dist/template
 
-  # src/projects/0_template.cpp
-  clang++ -std=c++23 src/projects/0_template.cpp -o dist/projects/template
-
   # src/hw.cpp
   clang++ -std=c++23 src/hw.cpp -o dist/hw
 
@@ -36,26 +33,17 @@ compile() {
   # src/math.cpp
   clang++ -std=c++23 src/math.cpp -o dist/math
 
-  # src/projects/hypotenuse.cpp
-  clang++ -std=c++23 src/projects/hypotenuse.cpp -o dist/projects/hypotenuse
-
   # src/if.cpp
   clang++ -std=c++23 src/if.cpp -o dist/ifc
 
   # src/switch.cpp
   clang++ -std=c++23 src/switch.cpp -o dist/switch
 
-  # src/projects/tcalc.cpp
-  clang++ -std=c++23 src/projects/tcalc.cpp -o dist/projects/tcalc
-
   # src/ternary.cpp
   clang++ -std=c++23 src/ternary.cpp -o dist/ternary
 
   # src/operators.cpp
   clang++ -std=c++23 src/operators.cpp -o dist/operators
-
-  # src/projects/convertemp.cpp
-  clang++ -std=c++23 src/projects/convertemp.cpp -o dist/projects/convertemp
 
   # src/string.cpp
   clang++ -std=c++23 src/string.cpp -o dist/string
@@ -69,17 +57,8 @@ compile() {
   # src/loops.cpp
   clang++ -std=c++23 src/loops.cpp -o dist/loops
 
-  # src/projects/rectangleloop.cpp
-  clang++ -std=c++23 src/projects/rectangleloop.cpp -o dist/projects/rectangleloop
-
   # src/random.cpp
   clang++ -std=c++23 src/random.cpp -o dist/random
-
-  # src/projects/reg.cpp
-  clang++ -std=c++23 src/projects/reg.cpp -o dist/projects/reg
-
-  # src/projects/gtn.cpp
-  clang++ -std=c++23 src/projects/gtn.cpp -o dist/projects/gtn
 
   # src/functions.cpp
   clang++ -std=c++23 src/functions.cpp -o dist/functions
@@ -89,12 +68,6 @@ compile() {
 
   # src/return.cpp
   clang++ -std=c++23 src/return.cpp -o dist/returning
-
-  # src/projects/bp.cpp
-  clang++ -std=c++23 src/projects/bp.cpp -o dist/projects/bp
-
-  # src/projects/rps.cpp
-  clang++ -std=c++23 src/projects/rps.cpp -o dist/projects/rps
 
   # src/arrays.cpp
   clang++ -std=c++23 src/arrays.cpp -o dist/arrays
@@ -128,7 +101,6 @@ main() {
   # Make the dist directory
   mkdir -p dist
   mkdir -p dist/examples
-  mkdir -p dist/projects
 
   mkdir -p dist/examples/functions
 
