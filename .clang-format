@@ -1,0 +1,50 @@
+---
+Language: Cpp
+BasedOnStyle: Microsoft
+
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+
+NamespaceIndentation: All
+IndentPPDirectives: BeforeHash
+IndentCaseLabels: true
+
+# Overrides Microsoft's "Break" to keep braces attached to the line.
+BreakBeforeBraces: Attach
+
+# This forces: if (cond) { func(); } even for single lines.
+AllowShortBlocksOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortLoopsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
+InsertBraces: true
+
+# Keeps space after 'if', but removes it for functions
+SpaceBeforeParens: Custom
+SpaceBeforeParensOptions:
+  AfterControlStatements: true
+  AfterFunctionDeclarationName: false
+  AfterFunctionDefinitionName: false
+  AfterIfMacros: true
+  AfterOverloadedOperator: false
+
+ColumnLimit: 100
+PointerAlignment: Left
+AlignEscapedNewlines: Left
+SpaceAfterCStyleCast: true
+
+FixNamespaceComments: true
+SortIncludes: true
+---
+Language: Json
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+---
+Language: JavaScript
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+ColumnLimit: 100
+JavaScriptQuotes: Leave
