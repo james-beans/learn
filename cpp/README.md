@@ -4,7 +4,7 @@
 ---
 
 ## Credits
-- [C++ Full Course for free ⚡](https://www.youtube.com/watch?v=-TkoO8Z07hI) - `4:07:55`
+- [C++ Full Course for free ⚡](https://www.youtube.com/watch?v=-TkoO8Z07hI) - `4:17:55`
 
 ---
 
