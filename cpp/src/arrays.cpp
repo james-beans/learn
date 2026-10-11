@@ -1,7 +1,10 @@
 #include <iostream>
 
 using std::string;
+
 using std::cout;
+using std::cin;
+using std::getline;
 
 #include "0_common.h"
 using namespace c;
@@ -14,6 +17,71 @@ double getTotal(double prices[], int size) {
   }
 
   return total;
+}
+
+int intSearchArray(int array[], int size, int element) {
+  // Linear search
+  for (int i = 0; i < size; i++) {
+    if (array[i] == element) {
+      return i;
+    }
+  }
+  /*
+   * In programming, -1 is a sentinel value.
+   * If you see -1, or return it, it typically
+   * means that something wasn't found.
+   */
+  return -1;
+}
+
+int stringSearchArray(string array[], int size, string element) {
+  for (int i = 0; i < size; i++) {
+    if (array[i] == element) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+void sorta(int array[], int size) {
+  int temp;
+
+  /*
+   * The reason that the condition is size - 1
+   * is because we don't need to compare the last
+   * element to anything.
+   *
+   * The larger values will naturally gravitate
+   * towards the end of the array.
+   */
+  for (int i = 0; i < size - 1; i++) {
+    /*
+     * Once we place the larger elements all the way to the right,
+     * they should already be in order. We don't need to sort
+     * any elements that are already sorted.
+     */
+    for (int j = 0; j < size - i - 1; j++) {
+      if (array[j] > array[j + 1]) {
+        temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
+    }
+  }
+}
+
+void sortd(int array[], int size) {
+  int temp;
+
+  for (int i = 0; i < size - 1; i++) {
+    for (int j = 0; j < size - i - 1; j++) {
+      if (array[j] < array[j + 1]) {
+        temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
+    }
+  }
 }
 
 int main() {
@@ -192,6 +260,186 @@ int main() {
   double total = getTotal(prices, size);
 
   cout << "$" << total << '\n';
+
+  // -- Section 4:
+  section(4);
+
+  /*
+   * This is technically a linear search.
+   * - You begin at the first element of an array
+   * - You check to see if the values are equal
+   * - If they aren't equal, you move to the next element
+   * Until you reach the end.
+   */
+
+  int numbersn[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  int sizen = sizeof(numbersn)/sizeof(numbersn[0]);
+  int indexn;
+  int myNum;
+
+  cout << "Enter element to search for: ";
+  cin >> myNum;
+
+  // Clear the leftover newline character from the input buffer
+  cin.ignore();
+
+  indexn = intSearchArray(numbersn, sizen, myNum);
+
+  if (indexn != -1) {
+    cout << myNum << " is at index " << indexn << "\n";
+  } else {
+    cout << myNum << " is not in the array\n";
+  }
+
+  string foods[] = {"pizza", "hamburger", "hotdog"};
+  int sizef = sizeof(foods)/sizeof(foods[0]);
+  int indexf;
+  string myFood;
+
+  cout << "Enter element to search for: ";
+  // Strings may contain spaces, so we use std::getline instead of std::cin
+  getline(cin, myFood);
+
+  indexf = stringSearchArray(foods, sizef, myFood);
+
+  if (indexf != -1) {
+    cout << myFood << " is at index " << indexf << "\n";
+  } else {
+    cout << myFood << " is not in the array\n";
+  }
+
+  // -- Section 5:
+  section(5);
+
+  /*
+   * This is a simple bubble sorting algorithm.
+   * It sorts through the numbers in order until they
+   * reach a certain order pattern like ascending order
+   * or decending order.
+   *
+   * There are more advanced and faster algorithms for
+   * this task, but for simplicity we only do bubble
+   * sort for now.
+   */
+
+  int sortList[] = {10, 7, 1, 5, 3, 8, 6, 2, 9, 4}; // Not in order on purpose
+  int sizel = sizeof(sortList)/sizeof(sortList[0]);
+
+  sorta(sortList, sizel);
+
+  for (int element : sortList) {
+    cout << element <<  " ";
+  }
+
+  n();
+
+  sortd(sortList, sizel);
+
+  for (int element : sortList) {
+    cout << element <<  " ";
+  }
+
+  n();
+
+  // -- Section 6:
+  section(6);
+
+  // Filling an array with user input
+  // `foodsi` = foods input
+
+  string foodsi[5];
+  int sizei = sizeof(foodsi)/sizeof(foodsi[0]);
+
+  for (int i = 0; i < sizei; i++) {
+    cout << "Enter a food you like #" << i + 1 << ": ";
+    getline(cin, foodsi[i]);
+  }
+
+  cout << "You like the following food:\n";
+
+  for (string food : foodsi) {
+    cout << food << "\n";
+  }
+
+  n();
+
+  string foodsi2[5];
+  int sizei2 = sizeof(foodsi2)/sizeof(foodsi2[0]);
+  string tempi;
+
+  for (int i = 0; i < sizei2; i++) {
+    cout << "Enter a food you like or 'q' to quit; #" << i + 1 << ": ";
+    getline(cin, tempi);
+    if (tempi == "q") {
+      break;
+    } else {
+      foodsi2[i] = tempi;
+    }
+  }
+
+  cout << "You like the following food:\n";
+
+  // This for loop shouldn't display any elements that are empty
+  for (int i = 0; !foodsi2[i].empty(); i++) {
+    cout << foodsi2[i] << "\n";
+  }
+
+  // -- Section 7:
+  section(7);
+
+  /*
+   * 2D multidimensional arrays are just arrays where each element is
+   * its own seperate array.
+   *
+   * 2D multidimensional arrays require 2 sets of square brackets
+   * to initialize the array.
+   *
+   * `type name[][]`
+   *
+   * The first set of square brackets is for the number of rows.
+   * The second set of square brackets is for the number of columns.
+   * The amount of elements would be `rows * columns`.
+   *
+   * Row size is optional, column size is non-optional.
+   */
+
+  string cars[][3] = {{"Mustang", "Escape", "F-150"},
+                     {"Corvette", "Equinox", "Silverado"},
+                     {"Challenger", "Durango", "Ram 1500"}};
+
+  cout << cars[0][0] << " ";
+  cout << cars[0][1] << " ";
+  cout << cars[0][2] << " ";
+
+  n();
+
+  cout << cars[1][0] << " ";
+  cout << cars[1][1] << " ";
+  cout << cars[1][2] << " ";
+
+  n();
+
+  cout << cars[2][0] << " ";
+  cout << cars[2][1] << " ";
+  cout << cars[2][2] << " ";
+
+  n();
+
+  int rows = sizeof(cars)/sizeof(cars[0]);
+  int columns = sizeof(cars[0])/sizeof(cars[0][0]);
+
+  // Print the memory addresses of each inner array
+  for (int i = 0; i < rows; i++) {
+    cout << "#" << i << " " << cars[i] << "\n";
+  }
+
+  // To get the elements in each array
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < columns; j++) {
+      cout << cars[i][j] << " ";
+    }
+    cout << "\n";
+  }
 
   return 0;
 }

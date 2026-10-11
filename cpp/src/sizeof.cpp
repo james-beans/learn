@@ -11,9 +11,11 @@ int main() {
   section(1);
 
   /*
-   * The sizeof operator determines the
+   * The `sizeof();` function determines the
    * size in bytes of a variable, data
    * type, class, object and more.
+   *
+   * `sizeof(typeorvariable);`
    */
 
   string name = "James"; // 32 bytes: stores the location to the actual string data

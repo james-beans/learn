@@ -78,6 +78,9 @@ compile() {
   # src/templates.cpp
   clang++ -std=c++23 src/templates.cpp -o dist/templates
 
+  # src/fill.cpp
+  clang++ -std=c++23 src/fill.cpp -o dist/fill
+
   n && echo "Compiled all programs." && n
 }
 
