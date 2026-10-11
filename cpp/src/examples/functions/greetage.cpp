@@ -4,14 +4,12 @@
 
 #include <iostream>
 
-using std::string;
 using std::cout;
+using std::string;
 
 void greetage(string name = "user", int age = 20) {
   cout << "Hello, " << name << "!\n";
   cout << "You are " << age << " years old.\n";
 }
 
-int main() {
-  greetage("James", 20);
-}
+int main() { greetage("James", 20); }

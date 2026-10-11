@@ -4,8 +4,8 @@
 using std::cout;
 using std::string;
 
-using std::vector;
 using std::pair;
+using std::vector;
 
 #include "0_common.h"
 using namespace c;
@@ -29,17 +29,20 @@ using namespace c;
 typedef vector<pair<string, int>> pairlist_t;
 
 typedef string text_t; // string but more readable.
-//typedef string s_t; // string but shorter.
+// typedef string s_t; // string but shorter.
 
-//typedef int num_t; // int but more understandable.
+// typedef int num_t; // int but more understandable.
 typedef int number_t; // int but more readable.
 
-using t_t = string; // string but shorter; text_t but shorter and also using the modern `using` keyword instead of `typedef`.
-using n_t = int; // int but more understandable; number_t and num_t but shorter and more understandable.
+using t_t = string; // string but shorter; text_t but shorter and also using the
+                    // modern `using` keyword instead of `typedef`.
+using n_t = int; // int but more understandable; number_t and num_t but shorter
+                 // and more understandable.
 
 // Assignment:
-typedef unsigned int coun_t; // alias for representing the count of items in a collection.
-//using count = unsigned int;
+typedef unsigned int
+    coun_t; // alias for representing the count of items in a collection.
+// using count = unsigned int;
 
 int main() {
   // -- Section 1:

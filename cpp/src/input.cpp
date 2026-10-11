@@ -1,9 +1,9 @@
 #include <iostream>
 
+using std::cin; // Doesn't allow whitespaces in input by itself
+using std::cout;
 using std::getline; // Allows whitespaces in input from `cin`
 using std::string;
-using std::cout;
-using std::cin; // Doesn't allow whitespaces in input by itself
 using std::ws;
 
 #include "0_common.h"
@@ -20,9 +20,10 @@ int main() {
   int age;
 
   cout << "What's your full name? ";
-  getline(cin >> ws, name); // `cin >> ws` will make sure there won't be any whitespaces before any user input
-  //cout << "What's your full name? ";
-  //cin >> name;
+  getline(cin >> ws, name); // `cin >> ws` will make sure there won't be any
+                            // whitespaces before any user input
+  // cout << "What's your full name? ";
+  // cin >> name;
 
   cout << "How old are you? ";
   cin >> age;

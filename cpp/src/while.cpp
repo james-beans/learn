@@ -4,14 +4,14 @@
 #include <chrono>
 #include <thread>
 
+using std::cin;
+using std::cout;
 using std::getline;
 using std::string;
-using std::cout;
-using std::cin;
 
-using std::this_thread::sleep_for;
 using std::chrono::milliseconds;
 using std::chrono::seconds;
+using std::this_thread::sleep_for;
 
 #include "0_common.h"
 using namespace c;

@@ -1,7 +1,7 @@
 #include <iostream>
 
-using std::string;
 using std::cout;
+using std::string;
 
 #include "0_common.h"
 using namespace c;
@@ -14,14 +14,13 @@ void happyBirthday(int age, string name = "you") {
   cout << "You are " << age << " years old.\n";
 }
 
-void bakePizza() {
-  cout << "Here is your pizza!\n";
-}
+void bakePizza() { cout << "Here is your pizza!\n"; }
 void bakePizza(string topping1) {
   cout << "Here is your special, " << topping1 << " pizza!\n";
 }
 void bakePizza(string topping1, string topping2) {
-  cout << "Here is your extra special, " << topping1 << " and " << topping2 << " pizza!\n";
+  cout << "Here is your extra special, " << topping1 << " and " << topping2
+       << " pizza!\n";
 }
 
 int main() {
@@ -69,8 +68,8 @@ int main() {
    *
    name();
    */
-   // Run a function with args like this:
-   happyBirthday(20, "James");
+  // Run a function with args like this:
+  happyBirthday(20, "James");
   /*
    * External functions usually have to be put before
    * the functions where the external function is going

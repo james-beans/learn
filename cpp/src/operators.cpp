@@ -1,7 +1,7 @@
 #include <iostream>
 
-using std::cout;
 using std::cin;
+using std::cout;
 
 #include "0_common.h"
 using namespace c;

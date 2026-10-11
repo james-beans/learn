@@ -14,23 +14,23 @@ int main() {
   // `*`, `/`).
 
   int students = 20;
-  //double students = 20;
+  // double students = 20;
 
   int remainder = students % 3;
 
-  //students = students + 1;
-  //students += 1;
-  //students++;
+  // students = students + 1;
+  // students += 1;
+  // students++;
 
-  //students = students - 1;
-  //students -= 1;
-  //students--;
+  // students = students - 1;
+  // students -= 1;
+  // students--;
 
-  //students = students * 2;
-  //students*=2;
+  // students = students * 2;
+  // students*=2;
 
-  //students = students / 3;
-  //students/=3;
+  // students = students / 3;
+  // students/=3;
 
   cout << students << '\n';
   cout << remainder << '\n';

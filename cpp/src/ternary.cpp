@@ -45,13 +45,16 @@ int main() {
   n();
 
   bool hungry1 = true;
-  hungry1 == true ? cout << "1: I'm very hungry right now...\n" : cout << "1: I don't need food right now.\n";
+  hungry1 == true ? cout << "1: I'm very hungry right now...\n"
+                  : cout << "1: I don't need food right now.\n";
 
   bool hungry2 = false;
-  hungry2 ? cout << "2: I'm very hungry right now...\n" : cout << "2: I don't need food right now.\n";
+  hungry2 ? cout << "2: I'm very hungry right now...\n"
+          : cout << "2: I don't need food right now.\n";
 
   bool hungry3 = true;
-  cout << ( hungry3 ? "3: I'm very hungry right now...\n" : "3: I don't need food right now.\n");
+  cout << (hungry3 ? "3: I'm very hungry right now...\n"
+                   : "3: I don't need food right now.\n");
 
   return 0;
 }

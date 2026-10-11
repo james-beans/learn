@@ -2,8 +2,8 @@
 
 using std::string;
 
-using std::cout;
 using std::cin;
+using std::cout;
 using std::getline;
 
 #include "0_common.h"
@@ -30,8 +30,10 @@ int main() {
   n();
 
   string foods2[15];
-  // If you set the value wrong for the `fill();` function's end, it will cause a segmentation fault
-  fill(foods2, foods2 + 15, "burger"); // Fills the whole array with 15 burger elements
+  // If you set the value wrong for the `fill();` function's end, it will cause
+  // a segmentation fault
+  fill(foods2, foods2 + 15,
+       "burger"); // Fills the whole array with 15 burger elements
 
   for (string food : foods2) {
     cout << food << "\n";
@@ -54,8 +56,8 @@ int main() {
   string foods4[SIZE4];
 
   // Set half of them to toast, and half of them to beans
-  fill(foods4, foods4 + (SIZE4/2), "toast");
-  fill(foods4 + (SIZE4/2), foods4 + SIZE4, "beans");
+  fill(foods4, foods4 + (SIZE4 / 2), "toast");
+  fill(foods4 + (SIZE4 / 2), foods4 + SIZE4, "beans");
 
   for (string food : foods4) {
     cout << food << "\n";
@@ -66,9 +68,9 @@ int main() {
   const int SIZE5 = 15;
   string foods5[SIZE5];
 
-  fill(foods5, foods5 + (SIZE5/3), "pizza");
-  fill(foods5 + (SIZE5/3), foods5 + (SIZE5/3)*2, "burger");
-  fill(foods5 + (SIZE5/3)*2, foods5 + SIZE5, "hotdog");
+  fill(foods5, foods5 + (SIZE5 / 3), "pizza");
+  fill(foods5 + (SIZE5 / 3), foods5 + (SIZE5 / 3) * 2, "burger");
+  fill(foods5 + (SIZE5 / 3) * 2, foods5 + SIZE5, "hotdog");
 
   for (string food : foods5) {
     cout << food << "\n";

@@ -2,8 +2,8 @@
 
 using std::string;
 
-using std::cout;
 using std::cin;
+using std::cout;
 using std::getline;
 
 #include "0_common.h"
@@ -127,13 +127,14 @@ int main() {
    */
 
   string a[] = {"a", "b", "c", "d", "e"};
-  cout << a << '\n'; // Print the address
-  cout << a[0] << '\n'; // Print the first value
-  cout << a[1] << '\n'; // Print the second value
-  cout << a[2] << '\n'; // Print the third value
-  cout << a[3] << '\n'; // Print the fourth value
+  cout << a << '\n';      // Print the address
+  cout << a[0] << '\n';   // Print the first value
+  cout << a[1] << '\n';   // Print the second value
+  cout << a[2] << '\n';   // Print the third value
+  cout << a[3] << '\n';   // Print the fourth value
   cout << a[4] << "\n\n"; // Print the fifth value
-  // This can go on and on and on but I'm stopping it here so it doesn't take up the rest of the file.
+  // This can go on and on and on but I'm stopping it here so it doesn't take up
+  // the rest of the file.
 
   /*
    * Interestingly, because C++ is based of
@@ -273,7 +274,7 @@ int main() {
    */
 
   int numbersn[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-  int sizen = sizeof(numbersn)/sizeof(numbersn[0]);
+  int sizen = sizeof(numbersn) / sizeof(numbersn[0]);
   int indexn;
   int myNum;
 
@@ -292,7 +293,7 @@ int main() {
   }
 
   string foods[] = {"pizza", "hamburger", "hotdog"};
-  int sizef = sizeof(foods)/sizeof(foods[0]);
+  int sizef = sizeof(foods) / sizeof(foods[0]);
   int indexf;
   string myFood;
 
@@ -323,12 +324,12 @@ int main() {
    */
 
   int sortList[] = {10, 7, 1, 5, 3, 8, 6, 2, 9, 4}; // Not in order on purpose
-  int sizel = sizeof(sortList)/sizeof(sortList[0]);
+  int sizel = sizeof(sortList) / sizeof(sortList[0]);
 
   sorta(sortList, sizel);
 
   for (int element : sortList) {
-    cout << element <<  " ";
+    cout << element << " ";
   }
 
   n();
@@ -336,7 +337,7 @@ int main() {
   sortd(sortList, sizel);
 
   for (int element : sortList) {
-    cout << element <<  " ";
+    cout << element << " ";
   }
 
   n();
@@ -348,7 +349,7 @@ int main() {
   // `foodsi` = foods input
 
   string foodsi[5];
-  int sizei = sizeof(foodsi)/sizeof(foodsi[0]);
+  int sizei = sizeof(foodsi) / sizeof(foodsi[0]);
 
   for (int i = 0; i < sizei; i++) {
     cout << "Enter a food you like #" << i + 1 << ": ";
@@ -364,7 +365,7 @@ int main() {
   n();
 
   string foodsi2[5];
-  int sizei2 = sizeof(foodsi2)/sizeof(foodsi2[0]);
+  int sizei2 = sizeof(foodsi2) / sizeof(foodsi2[0]);
   string tempi;
 
   for (int i = 0; i < sizei2; i++) {
@@ -404,8 +405,8 @@ int main() {
    */
 
   string cars[][3] = {{"Mustang", "Escape", "F-150"},
-                     {"Corvette", "Equinox", "Silverado"},
-                     {"Challenger", "Durango", "Ram 1500"}};
+                      {"Corvette", "Equinox", "Silverado"},
+                      {"Challenger", "Durango", "Ram 1500"}};
 
   cout << cars[0][0] << " ";
   cout << cars[0][1] << " ";
@@ -425,8 +426,8 @@ int main() {
 
   n();
 
-  int rows = sizeof(cars)/sizeof(cars[0]);
-  int columns = sizeof(cars[0])/sizeof(cars[0][0]);
+  int rows = sizeof(cars) / sizeof(cars[0]);
+  int columns = sizeof(cars[0]) / sizeof(cars[0][0]);
 
   // Print the memory addresses of each inner array
   for (int i = 0; i < rows; i++) {

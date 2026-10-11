@@ -6,15 +6,9 @@ using std::string;
 #include "0_common.h"
 using namespace c;
 
-template <typename T>
-T add(T a, T b) {
-  return a + b;
-}
+template <typename T> T add(T a, T b) { return a + b; }
 
-template <int Multiplier>
-int boost(int value) {
-  return value * Multiplier;
-}
+template <int Multiplier> int boost(int value) { return value * Multiplier; }
 
 int main() {
   // -- Section 1:

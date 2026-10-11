@@ -17,13 +17,13 @@ int main() {
 
   // Truncated decimal portion without conversion/cast
   // to a different type that supports decimals.
-  double a = (int) 3.14;
+  double a = (int)3.14;
   cout << a << '\n';
 
   char b = 100; // 100 in ASCII is 'd'
   cout << b << '\n';
 
-  cout << (char) 100 << '\n';
+  cout << (char)100 << '\n';
 
   int correct = 8;
   int questions = 10;

@@ -1,20 +1,16 @@
 #include <iostream>
 
-using std::string;
 using std::cout;
+using std::string;
 
 #include "0_common.h"
 using namespace c;
 
 int n2 = 3;
 
-void printN1(int n1) {
-  cout << n1 << '\n';
-}
+void printN1(int n1) { cout << n1 << '\n'; }
 
-void printN2() {
-  cout << n2 << '\n';
-}
+void printN2() { cout << n2 << '\n'; }
 
 int main() {
   // -- Section 1:
@@ -109,7 +105,8 @@ int main() {
 
   cout << "A week has " << week << " days in it.\n";
   cout << "A cost of a burger is $" << burger << " .\n";
-  cout << "The first letter of the alphabet is the letter \"" << falphabet << "\".\n";
+  cout << "The first letter of the alphabet is the letter \"" << falphabet
+       << "\".\n";
   cout << "The lights are currently " << lightstate << ".\n";
   cout << "The most commonly used English word is \"" << word << "\".\n";
 

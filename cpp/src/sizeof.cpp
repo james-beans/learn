@@ -1,7 +1,7 @@
 #include <iostream>
 
-using std::string;
 using std::cout;
+using std::string;
 
 #include "0_common.h"
 using namespace c;
@@ -18,7 +18,8 @@ int main() {
    * `sizeof(typeorvariable);`
    */
 
-  string name = "James"; // 32 bytes: stores the location to the actual string data
+  string name =
+      "James";      // 32 bytes: stores the location to the actual string data
   double gpa = 2.5; // 8 bytes
   char grade = 'F'; // 1 byte: a single character
   bool student = true; // 1 byte: a single true/false value
@@ -28,7 +29,10 @@ int main() {
   cout << sizeof(grade) << " byte\n";
   cout << sizeof(student) << " byte\n\n";
 
-  char grades[] = {'A', 'B', 'C', 'D', 'F'}; // 5 bytes: because the array stores only 5 single characters and one single character is 1 byte (5 * 1)
+  char grades[] = {
+      'A', 'B', 'C', 'D',
+      'F'}; // 5 bytes: because the array stores only 5 single characters and
+            // one single character is 1 byte (5 * 1)
   string cars[] = {"Corvette", "Mustang", "Camry"};
   string students[] = {"Jim", "Bob", "Patick", "John"};
 

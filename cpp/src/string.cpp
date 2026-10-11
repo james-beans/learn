@@ -1,9 +1,9 @@
 #include <iostream>
 
+using std::cin;
+using std::cout;
 using std::getline;
 using std::string;
-using std::cout;
-using std::cin;
 using std::ws;
 
 #include "0_common.h"
