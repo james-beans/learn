@@ -43,14 +43,16 @@ int main() {
 
   string* p_name = &namep;
   int* p_age = &agep;
-  string* p_freePizzas = freePizzasp; // Arrays don't need to use `&` as its already a memory address
+  string* p_freePizzas =
+      freePizzasp; // Arrays don't need to use `&` as its already a memory address
 
-  cout << p_name << "\n"; // Prints the memory address
-  cout << *p_name << "\n"; // Prints the value of that pointer
-  cout << p_age << "\n"; // Prints the memory address
-  cout << *p_age << "\n"; // Prints the value of that pointer
+  cout << p_name << "\n";       // Prints the memory address
+  cout << *p_name << "\n";      // Prints the value of that pointer
+  cout << p_age << "\n";        // Prints the memory address
+  cout << *p_age << "\n";       // Prints the value of that pointer
   cout << p_freePizzas << "\n"; // Prints the memory address
-  cout << *p_freePizzas << "\n"; // Prints the value of that pointer as the first element as its an array
+  cout << *p_freePizzas
+       << "\n"; // Prints the value of that pointer as the first element as its an array
 
   // -- Section 3:
   section(3);
