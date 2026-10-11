@@ -1,9 +1,11 @@
 #include <iostream>
+#include <algorithm>
 
 using std::string;
 
 using std::cin;
 using std::cout;
+using std::fill;
 using std::getline;
 
 #include "0_common.hpp"
