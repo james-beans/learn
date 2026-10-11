@@ -46,6 +46,7 @@ jobs:
             git add .
             git commit -m "${{ env.COMMIT_TITLE }}" -m "- Linted last commits latest version."
 
+            git pull --rebase origin main
             git push origin main
           else
             echo "No changes to lint."
