@@ -24,7 +24,7 @@ void swapa(string x, string y) {
   y = temp;
 }
 
-void swapb(string &x, string &y) {
+void swapb(string& x, string& y) {
   string temp;
 
   cout << "swapb - X: " << &x << "\n";
