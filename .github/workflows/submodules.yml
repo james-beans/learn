@@ -1,0 +1,45 @@
+name: Update Submodules
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Update submodules to latest
+        run: git submodule update --remote --recursive
+
+      - name: Configure Git Identity
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Set dynamic commit message env
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: echo "COMMIT_TITLE=[$(TZ='Europe/London' date "+%Y/%m/%d %H:%M:%S auto")]" >> $GITHUB_ENV
+
+      - name: Commit formatting changes
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: |
+          git status
+          if [[ -n $(git status --porcelain) ]]; then
+            git add .
+            git commit -m "${{ env.COMMIT_TITLE }}" -m "- Updated submodules to latest versions."
+
+            git push origin main
+          else
+            echo "No submodule updates found."
+          fi
