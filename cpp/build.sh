@@ -81,6 +81,9 @@ compile() {
   # src/fill.cpp
   clang++ -std=c++23 src/fill.cpp -o dist/fill
 
+  # src/memory.cpp
+  clang++ -std=c++23 src/memory.cpp -o dist/memory
+
   n && echo "Compiled all programs." && n
 }
 

@@ -13,7 +13,7 @@ using std::chrono::milliseconds;
 using std::chrono::seconds;
 using std::this_thread::sleep_for;
 
-#include "0_common.h"
+#include "0_common.hpp"
 using namespace c;
 
 void s(int ms) {

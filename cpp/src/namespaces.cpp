@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "0_common.h"
+#include "0_common.hpp"
 using namespace c;
 
 // Namespaces provide a solution for preventing

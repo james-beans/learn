@@ -3,7 +3,7 @@
 using std::cout;
 using std::string;
 
-#include "0_common.h"
+#include "0_common.hpp"
 using namespace c;
 
 double square(double length) { return length * length; }

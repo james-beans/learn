@@ -3,7 +3,7 @@
 using std::cin;
 using std::cout;
 
-#include "0_common.h"
+#include "0_common.hpp"
 using namespace c;
 
 int main() {

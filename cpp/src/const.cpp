@@ -2,11 +2,37 @@
 
 using std::cout;
 
-#include "0_common.h"
+#include "0_common.hpp"
 using namespace c;
 
+void printInfoA(string name, int age) {
+  name = "none";
+  age = 0;
+
+  cout << name << "\n";
+  cout << age << "\n";
+}
+
+void printInfoB(const string name, const int age) {
+  // Calling these here right now will cause errors:
+  // name = "none";
+  // age = 0;
+
+  cout << name << "\n";
+  cout << age << "\n";
+}
+
+void printInfoC(const string& name, const int& age) {
+  // Calling these here right now will cause errors:
+  // name = "none";
+  // age = 0;
+
+  cout << name << "\n";
+  cout << age << "\n";
+}
+
 int main() {
-  // const makes it so that
+  // `const` makes it so that
   // people can't change the
   // value of the variable
   // later when using it in
@@ -49,6 +75,22 @@ int main() {
   }
 
   cout << "The power in the building " << powerstate << " on.\n";
+
+  // -- Section 3:
+  section(3);
+
+  /*
+   * A `const` parameter is a parameter that is effectively a read-only
+   * parameter for a function. This makes code more secure (within a function)
+   * and conveys intent. Useful for references and pointers.
+   */
+
+  string name = "James";
+  int age = 20;
+
+  printInfoA(name, age);
+  printInfoB(name, age);
+  printInfoC(name, age);
 
   return 0;
 }

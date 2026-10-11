@@ -7,7 +7,7 @@ using std::string;
 using std::pair;
 using std::vector;
 
-#include "0_common.h"
+#include "0_common.hpp"
 using namespace c;
 
 // typedef is a reserved keyword used to create

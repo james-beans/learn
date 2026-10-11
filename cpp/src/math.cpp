@@ -17,7 +17,7 @@ using std::min; // Minimum
 // `ceil(a)` - rounds a up
 // `floor(a)` - rounds a down
 
-#include "0_common.h"
+#include "0_common.hpp"
 using namespace c;
 
 int main() {

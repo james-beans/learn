@@ -1,9 +1,10 @@
 #include <iostream>
 
-using std::cout;
 using std::string;
 
-#include "0_common.h"
+using std::cout;
+
+#include "0_common.hpp"
 using namespace c;
 
 int n2 = 3;
@@ -11,6 +12,28 @@ int n2 = 3;
 void printN1(int n1) { cout << n1 << '\n'; }
 
 void printN2() { cout << n2 << '\n'; }
+
+void swapa(string x, string y) {
+  string temp;
+
+  cout << "swapa - X: " << &x << "\n";
+  cout << "swapa - Y: " << &y << "\n";
+
+  temp = x;
+  x = y;
+  y = temp;
+}
+
+void swapb(string &x, string &y) {
+  string temp;
+
+  cout << "swapb - X: " << &x << "\n";
+  cout << "swapb - Y: " << &y << "\n";
+
+  temp = x;
+  x = y;
+  y = temp;
+}
 
 int main() {
   // -- Section 1:
@@ -110,7 +133,7 @@ int main() {
   cout << "The most commonly used English word is \"" << word << "\".\n";
 
   // -- Section 3:
-  cout << "\n-- Section 3:\n";
+  section(3);
 
   /*
    * - Local variables are declared inside a function or
@@ -135,6 +158,49 @@ int main() {
 
   // Global variables example:
   printN2();
+
+  // -- Section 4:
+  section(4);
+
+  /*
+   * The differences between pass by value and pass by reference.
+   *
+   * Normally when we pass a variable to a function, it passes by
+   * a value. When we invoke a function with variables as the parameters,
+   * we are making copies of the original values. What we have now are
+   * two copies of the variable `x` and `y`. And all we're doing is
+   * switching two copies and not the original values. This is pass by value.
+   *
+   * If I need to change the original values of these variables, I could
+   * instead pass by reference. A reference as in a memory address. To
+   * change the function to use pass by reference, put `&` in front of the
+   * function argument names.
+   *
+   * When we passed by value, we created copies of `x` and `y`.
+   * When we passed by reference, we used the same instances of `x` and `y`.
+   *
+   * When we passed by reference, we also underneath passed the original
+   * memory addresses so it uses the same instances. That is what the `&`
+   * operator does.
+   */
+
+  string x4 = "Kool Aid";
+  string y4 = "Water";
+
+  cout << "Before -> X: " << &x4 << "\n";
+  cout << "Before -> Y: " << &y4 << "\n";
+
+  n();
+
+  swapa(x4, y4);
+  cout << "After -> X: " << x4 << "\n";
+  cout << "After -> Y: " << y4 << "\n";
+
+  n();
+
+  swapb(x4, y4);
+  cout << "After -> X: " << x4 << "\n";
+  cout << "After -> Y: " << y4 << "\n";
 
   return 0;
 }

@@ -6,7 +6,7 @@ using std::getline; // Allows whitespaces in input from `cin`
 using std::string;
 using std::ws;
 
-#include "0_common.h"
+#include "0_common.hpp"
 using namespace c;
 
 int main() {
