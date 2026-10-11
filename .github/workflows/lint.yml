@@ -1,0 +1,52 @@
+name: Lint and Format
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Install clang-format
+        run: |
+          sudo apt update
+          sudo apt install -y clang-format
+
+      - name: Format files
+        run: find . \( -name "*.hpp" -o -name "*.cpp" -o -name "*.h" -o -name "*.c" \) -not -path "./.git/*" -exec clang-format -i {} +
+
+      - name: Configure Git Identity
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Set dynamic commit message env
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: echo "COMMIT_TITLE=[$(TZ='Europe/London' date "+%Y/%m/%d %H:%M:%S auto")]" >> $GITHUB_ENV
+
+      - name: Commit formatting changes
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: |
+          git status
+          if [[ -n $(git status --porcelain) ]]; then
+            git add .
+            git commit -m "${{ env.COMMIT_TITLE }}" -m "- Linted last commits latest version."
+
+            git push origin main
+          else
+            echo "No changes to lint."
+          fi
