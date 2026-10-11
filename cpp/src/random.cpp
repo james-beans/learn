@@ -9,24 +9,22 @@ using std::string;
 using namespace c;
 
 namespace pr {
-int num(int a, int b, bool print = false, string end = "\n") {
-  // PUT THIS ONLY AT THE START OF MAIN TO USE:
-  // `srand(time(NULL));`
-  // DO NOT ADD HERE OR ANYWHERE ELSE OTHERWISE
-  // IT WILL CLASH WITH OTHER LIBRARIES/USES OF
-  // THE SAME FUNCTION.
+  int num(int a, int b, bool print = false, string end = "\n") {
+    // PUT THIS ONLY AT THE START OF MAIN TO USE:
+    // `srand(time(NULL));`
+    // DO NOT ADD HERE OR ANYWHERE ELSE OTHERWISE
+    // IT WILL CLASH WITH OTHER LIBRARIES/USES OF
+    // THE SAME FUNCTION.
 
-  // Generate random number in range [a, b]
-  //
-  // int res = (rand() % b) + a;
-  int res = (rand() % (b - a + 1)) + a;
+    // Generate random number in range [a, b]
+    //
+    // int res = (rand() % b) + a;
+    int res = (rand() % (b - a + 1)) + a;
 
-  if (print) {
-    cout << res << end;
+    if (print) { cout << res << end; }
+
+    return res;
   }
-
-  return res;
-}
 } // namespace pr
 
 int main() {

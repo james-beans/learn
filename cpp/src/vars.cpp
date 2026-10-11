@@ -105,8 +105,7 @@ int main() {
 
   cout << "A week has " << week << " days in it.\n";
   cout << "A cost of a burger is $" << burger << " .\n";
-  cout << "The first letter of the alphabet is the letter \"" << falphabet
-       << "\".\n";
+  cout << "The first letter of the alphabet is the letter \"" << falphabet << "\".\n";
   cout << "The lights are currently " << lightstate << ".\n";
   cout << "The most commonly used English word is \"" << word << "\".\n";
 

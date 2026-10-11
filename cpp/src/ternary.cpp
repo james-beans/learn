@@ -53,8 +53,7 @@ int main() {
           : cout << "2: I don't need food right now.\n";
 
   bool hungry3 = true;
-  cout << (hungry3 ? "3: I'm very hungry right now...\n"
-                   : "3: I don't need food right now.\n");
+  cout << (hungry3 ? "3: I'm very hungry right now...\n" : "3: I don't need food right now.\n");
 
   return 0;
 }

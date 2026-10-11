@@ -36,12 +36,11 @@ typedef int number_t; // int but more readable.
 
 using t_t = string; // string but shorter; text_t but shorter and also using the
                     // modern `using` keyword instead of `typedef`.
-using n_t = int; // int but more understandable; number_t and num_t but shorter
-                 // and more understandable.
+using n_t = int;    // int but more understandable; number_t and num_t but shorter
+                    // and more understandable.
 
 // Assignment:
-typedef unsigned int
-    coun_t; // alias for representing the count of items in a collection.
+typedef unsigned int coun_t; // alias for representing the count of items in a collection.
 // using count = unsigned int;
 
 int main() {
