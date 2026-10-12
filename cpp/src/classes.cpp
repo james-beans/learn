@@ -63,9 +63,7 @@ public:
 
   Pizza() {}
 
-  Pizza(string topping1) {
-    this->a_topping1 = topping1;
-  }
+  Pizza(string topping1) { this->a_topping1 = topping1; }
 
   Pizza(string topping1, string topping2) {
     this->a_topping1 = topping1;
@@ -81,13 +79,9 @@ public:
   int a_publicTemperature = 0;
 
   Stove() {}
-  Stove(int temperature) {
-    m_setTemperature(temperature);
-  }
+  Stove(int temperature) { m_setTemperature(temperature); }
 
-  int m_getTemperature() {
-    return a_temperature;
-  }
+  int m_getTemperature() { return a_temperature; }
 
   // You can make safety checks inside of setters
   void m_setTemperature(int temperature) {
@@ -144,7 +138,7 @@ public:
   Sphere(double radius) {
     this->a_radius = radius;
     this->a_area = 4 * 3.14159 * (radius * radius);
-    this->a_volume = (4/3.0) * 3.14159 * (radius * radius * radius);
+    this->a_volume = (4 / 3.0) * 3.14159 * (radius * radius * radius);
   }
 };
 

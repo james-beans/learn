@@ -42,13 +42,34 @@ int main() {
   Day today = monday;
 
   switch (today) {
-    case sunday: { cout << "It is Sunday!\n"; break; }
-    case monday: { cout << "It is Monday!\n"; break; }
-    case tuesday: { cout << "It is Tuesday!\n"; break; }
-    case wednesday: { cout << "It is Wednesday!\n"; break; }
-    case thursday: { cout << "It is Thursday!\n"; break; }
-    case friday: { cout << "It is Friday!\n"; break; }
-    case saturday: { cout << "It is Saturday!\n"; break; }
+    case sunday: {
+      cout << "It is Sunday!\n";
+      break;
+    }
+    case monday: {
+      cout << "It is Monday!\n";
+      break;
+    }
+    case tuesday: {
+      cout << "It is Tuesday!\n";
+      break;
+    }
+    case wednesday: {
+      cout << "It is Wednesday!\n";
+      break;
+    }
+    case thursday: {
+      cout << "It is Thursday!\n";
+      break;
+    }
+    case friday: {
+      cout << "It is Friday!\n";
+      break;
+    }
+    case saturday: {
+      cout << "It is Saturday!\n";
+      break;
+    }
   }
 
   // Than this:
@@ -56,13 +77,34 @@ int main() {
   Day tomorrow = tuesday;
 
   switch (tomorrow) {
-    case 0: { cout << "It is Sunday!\n"; break; }
-    case 1: { cout << "It is Monday!\n"; break; }
-    case 2: { cout << "It is Tuesday!\n"; break; }
-    case 3: { cout << "It is Wednesday!\n"; break; }
-    case 4: { cout << "It is Thursday!\n"; break; }
-    case 5: { cout << "It is Friday!\n"; break; }
-    case 6: { cout << "It is Saturday!\n"; break; }
+    case 0: {
+      cout << "It is Sunday!\n";
+      break;
+    }
+    case 1: {
+      cout << "It is Monday!\n";
+      break;
+    }
+    case 2: {
+      cout << "It is Tuesday!\n";
+      break;
+    }
+    case 3: {
+      cout << "It is Wednesday!\n";
+      break;
+    }
+    case 4: {
+      cout << "It is Thursday!\n";
+      break;
+    }
+    case 5: {
+      cout << "It is Friday!\n";
+      break;
+    }
+    case 6: {
+      cout << "It is Saturday!\n";
+      break;
+    }
   }
 
   // But both still would work fine.

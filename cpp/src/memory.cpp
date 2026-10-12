@@ -2,8 +2,8 @@
 
 using std::string;
 
-using std::cout;
 using std::cin;
+using std::cout;
 
 #include "0_common.hpp"
 using namespace c;
@@ -148,9 +148,7 @@ int main() {
     cin >> p_grades[i];
   }
 
-  for (int i = 0; i < sizeg; i++) {
-    cout << p_grades[i] << " ";
-  }
+  for (int i = 0; i < sizeg; i++) { cout << p_grades[i] << " "; }
 
   delete[] p_grades;
 

@@ -7,10 +7,7 @@ using std::string;
 using namespace c;
 
 template <typename T> T add(T a, T b) { return a + b; }
-template <typename T, typename U>
-auto max(T x, U y) {
-  return (x > y) ? x : y;
-}
+template <typename T, typename U> auto max(T x, U y) { return (x > y) ? x : y; }
 
 template <int Multiplier> int boost(int value) { return value * Multiplier; }
 

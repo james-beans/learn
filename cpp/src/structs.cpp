@@ -27,16 +27,14 @@ void printCarc(Car car) {
   cout << car.color << "\n";
 }
 
-void printCaro(Car &car) {
+void printCaro(Car& car) {
   cout << &car << "\n";
   cout << car.model << "\n";
   cout << car.year << "\n";
   cout << car.color << "\n";
 }
 
-void paintCar(Car &car, string color) {
-  car.color = color;
-}
+void paintCar(Car& car, string color) { car.color = color; }
 
 int main() {
   // -- Section 1:

@@ -21,9 +21,7 @@ void bakePizza(string topping1, string topping2) {
 }
 
 void walki(int steps) {
-  for (int i = 0; i < steps; i++) {
-    cout << "You take a step.\n";
-  }
+  for (int i = 0; i < steps; i++) { cout << "You take a step.\n"; }
 }
 
 void walkr(int steps) {
@@ -35,9 +33,7 @@ void walkr(int steps) {
 
 int factoriali(int num) {
   int result = 1;
-  for (int i = 1; i <= num; i++) {
-    result = result * i;
-  }
+  for (int i = 1; i <= num; i++) { result = result * i; }
   return result;
 }
 
