@@ -114,9 +114,6 @@ main() {
   n
 
   # Make the dist directory
-  mkdir -p dist
-  mkdir -p dist/examples
-
   mkdir -p dist/examples/functions
 
   compile

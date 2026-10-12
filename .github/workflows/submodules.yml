@@ -5,6 +5,8 @@ on:
     branches:
       - main
   workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
 
 permissions:
   contents: write
@@ -28,17 +30,18 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Set dynamic commit message env
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
         run: echo "COMMIT_TITLE=[$(TZ='Europe/London' date "+%Y/%m/%d %H:%M:%S auto")]" >> $GITHUB_ENV
 
       - name: Commit formatting changes
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event_name == 'schedule'
         run: |
           git status
           if [[ -n $(git status --porcelain) ]]; then
             git add .
             git commit -m "${{ env.COMMIT_TITLE }}" -m "- Updated submodules to latest versions."
 
+            git pull --rebase origin main
             git push origin main
           else
             echo "No submodule updates found."
