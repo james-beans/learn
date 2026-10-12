@@ -41,7 +41,7 @@ int main() {
    */
 
   cout << "alignof(Test): " << alignof(Test) << "\n"; // Outputs: 16
-  cout << "sizeof(Test): " << sizeof(Test) << "\n"; // Outputs: 16
+  cout << "sizeof(Test): " << sizeof(Test) << "\n";   // Outputs: 16
 
   n();
 
