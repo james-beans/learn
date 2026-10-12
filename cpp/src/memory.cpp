@@ -3,6 +3,7 @@
 using std::string;
 
 using std::cout;
+using std::cin;
 
 #include "0_common.hpp"
 using namespace c;
@@ -63,7 +64,7 @@ int main() {
    * pointing at anything (null pointer).
    *
    * `nullptr` is the keyword that represents a null pointer literal.
-   * `null` is the keyword that represents a null value.
+   * `NULL` is the keyword that represents a null value.
    *
    * `nullptr`s are helpful when determining if an address was successfully
    * assigned to a pointer.
@@ -97,6 +98,63 @@ int main() {
     cout << "2: address was assigned\n";
     cout << *pointer2 << "\n";
   }
+
+  // -- Section 4:
+  section(4);
+
+  /*
+   * Dynamic memory is memory that is allocated after the program
+   * is already compiled and running. Use the `new` operator to allocate
+   * memory in the heap rather than the stack.
+   *
+   * Useful when we don't know how much memory we will need. Makes our
+   * programs more flexible, especially when accepting user input.
+   *
+   * The `new` operator usually is called alongside the `delete` operator
+   * to delete the memory space when your no longer using it. If you don't
+   * delete or free the address, you may cause a memory leak.
+   *
+   * To allocate an array you do:
+   * `type* name = NULL;`
+   * `name = new type[amount];`
+   *
+   * To delete an array you do:
+   * `delete[amount] name;`
+   */
+
+  int* p_num = NULL;
+
+  p_num = new int;
+
+  *p_num = 20;
+
+  cout << "address: " << p_num << "\n";
+  cout << "value: " << *p_num << "\n";
+
+  delete p_num;
+
+  n();
+
+  char* p_grades = NULL;
+  int sizeg;
+
+  cout << "How many grades to enter in?: ";
+  cin >> sizeg;
+
+  p_grades = new char[sizeg];
+
+  for (int i = 0; i < sizeg; i++) {
+    cout << "Enter grade #" << i + 1 << ": ";
+    cin >> p_grades[i];
+  }
+
+  for (int i = 0; i < sizeg; i++) {
+    cout << p_grades[i] << " ";
+  }
+
+  delete[] p_grades;
+
+  nn();
 
   return 0;
 }

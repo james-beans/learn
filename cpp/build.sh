@@ -49,10 +49,10 @@ compile() {
   clang++ -std=c++23 src/string.cpp -o dist/string
 
   # src/while.cpp
-  clang++ -std=c++23 src/while.cpp -o dist/whilel
+  clang++ -std=c++23 src/while.cpp -o dist/whilec
 
   # src/for.cpp
-  clang++ -std=c++23 src/for.cpp -o dist/forl
+  clang++ -std=c++23 src/for.cpp -o dist/forc
 
   # src/loops.cpp
   clang++ -std=c++23 src/loops.cpp -o dist/loops
@@ -83,6 +83,15 @@ compile() {
 
   # src/memory.cpp
   clang++ -std=c++23 src/memory.cpp -o dist/memory
+
+  # src/structs.cpp
+  clang++ -std=c++23 src/structs.cpp -o dist/structs
+
+  # src/enums.cpp
+  clang++ -std=c++23 src/enums.cpp -o dist/enums
+
+  # src/classes.cpp
+  clang++ -std=c++23 src/classes.cpp -o dist/classes
 
   n && echo "Compiled all programs." && n
 }

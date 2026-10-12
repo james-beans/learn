@@ -7,7 +7,8 @@ using std::cout;
 using std::string;
 
 namespace c {
-  void n() { cout << '\n'; }
+  inline void n() { cout << '\n'; }
+  inline void nn() { cout << "\n\n"; }
 
   // 1: Just the number
   // Usage: c::section(2);

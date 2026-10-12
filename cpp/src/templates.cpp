@@ -7,6 +7,10 @@ using std::string;
 using namespace c;
 
 template <typename T> T add(T a, T b) { return a + b; }
+template <typename T, typename U>
+auto max(T x, U y) {
+  return (x > y) ? x : y;
+}
 
 template <int Multiplier> int boost(int value) { return value * Multiplier; }
 
@@ -79,6 +83,11 @@ int main() {
    * We use < > to tell the compiler exactly what T should be.
    */
   cout << "Forced double: " << add<double>(10, 5.5) << "\n";
+
+  // -- Section 5 - Multiple types:
+  section(5, "Multiple types");
+
+  cout << max(1, 2.1) << "\n";
 
   n();
 

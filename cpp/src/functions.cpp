@@ -20,6 +20,35 @@ void bakePizza(string topping1, string topping2) {
   cout << "Here is your extra special, " << topping1 << " and " << topping2 << " pizza!\n";
 }
 
+void walki(int steps) {
+  for (int i = 0; i < steps; i++) {
+    cout << "You take a step.\n";
+  }
+}
+
+void walkr(int steps) {
+  if (steps > 0) {
+    cout << "You take a step.\n";
+    walkr(steps - 1);
+  }
+}
+
+int factoriali(int num) {
+  int result = 1;
+  for (int i = 1; i <= num; i++) {
+    result = result * i;
+  }
+  return result;
+}
+
+int factorialr(int num) {
+  if (num > 1) {
+    return num * factorialr(num - 1);
+  } else {
+    return 1;
+  }
+}
+
 int main() {
   // -- Section 1:
   section(1);
@@ -126,6 +155,42 @@ int main() {
   bakePizza();
   bakePizza("pepperoni");
   bakePizza("pepperoni", "mushroom");
+
+  // -- Section 3:
+  section(3);
+
+  /*
+   * Recursion is a programming technique where a function
+   * invokes (calls) itself from within itself. It's used
+   * to break a complex concept into repeatable single steps.
+   *
+   * Many problems we can approach iteratively or recursively.
+   *
+   * Some advantages of recursion are:
+   * - Less code and cleaner code
+   * - It's useful for sorting and searching algorithms
+   *
+   * Some disadvantages of recursion are:
+   * - It uses more memory
+   * - It can be slower
+   *
+   * Internally inside of the recursive function, if you
+   * don't add a check to stop it at some specific point,
+   * you will encounter an infinite loop AKA a stack overflow.
+   *
+   * When you invoke a function (call a function), you add
+   * what's called a frame to the stack. When your stack is
+   * overloaded, you'll encounter a stack overflow.
+   */
+
+  walki(10); // Iteratively
+  n();
+  walkr(10); // Recursively
+
+  n();
+
+  cout << factoriali(10) << "\n"; // Iteratively
+  cout << factorialr(10) << "\n"; // Recursively
 
   return 0;
 }
