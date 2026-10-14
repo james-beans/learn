@@ -20,8 +20,9 @@ jobs:
         run: |
           wget https://apt.llvm.org/llvm.sh
           chmod +x llvm.sh
-          sudo ./llvm.sh 20
-          sudo apt install -y clang-format-20
+          sudo ./llvm.sh 22
+          sudo apt install -y clang-format-22
+          clang-format-22 --version
           rm llvm.sh
 
       - name: Checkout code
@@ -30,7 +31,7 @@ jobs:
           fetch-depth: 0
 
       - name: Format files
-        run: find . \( -name "*.hpp" -o -name "*.cpp" -o -name "*.h" -o -name "*.c" \) -not -path "./.git/*" -exec clang-format -i {} +
+        run: find . \( -name "*.hpp" -o -name "*.cpp" -o -name "*.h" -o -name "*.c" \) -not -path "./.git/*" -exec clang-format-22 -i {} +
 
       - name: Configure Git Identity
         run: |
