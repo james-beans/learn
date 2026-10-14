@@ -27,20 +27,20 @@ struct Reward {
 
 void printReward(Reward reward) {
   switch (reward.type) {
-  case RewardType::CASH: {
-    cout << "Cash reward: $" << reward.cashAmount << "\n";
-    break;
-  }
+    case RewardType::CASH: {
+      cout << "Cash reward: $" << reward.cashAmount << "\n";
+      break;
+    }
 
-  case RewardType::ITEM: {
-    cout << "Item ID: " << reward.itemCode << "\n";
-    break;
-  }
+    case RewardType::ITEM: {
+      cout << "Item ID: " << reward.itemCode << "\n";
+      break;
+    }
 
-  case RewardType::EXPERIENCE: {
-    cout << "EXP points: " << reward.expPoints << "\n";
-    break;
-  }
+    case RewardType::EXPERIENCE: {
+      cout << "EXP points: " << reward.expPoints << "\n";
+      break;
+    }
   }
 }
 
