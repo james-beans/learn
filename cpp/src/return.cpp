@@ -6,17 +6,11 @@ using std::string;
 #include "0_common.hpp"
 using namespace c;
 
-double square(double length) {
-  return length * length;
-}
+double square(double length) { return length * length; }
 
-double cube(double length) {
-  return length * length * length;
-}
+double cube(double length) { return length * length * length; }
 
-string concatStrings(string st1, string st2) {
-  return st1 + " " + st2;
-}
+string concatStrings(string st1, string st2) { return st1 + " " + st2; }
 
 int main() {
   // -- Section 1:

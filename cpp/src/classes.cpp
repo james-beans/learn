@@ -16,21 +16,11 @@ public:
   int a_age = 0;
 
   // Methods
-  void m_eat() {
-    cout << a_name << " is eating.\n";
-  }
-  void m_drink() {
-    cout << a_name << " is drinking.\n";
-  }
-  void m_laugh() {
-    cout << a_name << " is laughing.\n";
-  }
-  void m_sleep() {
-    cout << a_name << " is sleeping.\n";
-  }
-  void m_roll() {
-    cout << a_name << " is rolling.\n";
-  }
+  void m_eat() { cout << a_name << " is eating.\n"; }
+  void m_drink() { cout << a_name << " is drinking.\n"; }
+  void m_laugh() { cout << a_name << " is laughing.\n"; }
+  void m_sleep() { cout << a_name << " is sleeping.\n"; }
+  void m_roll() { cout << a_name << " is rolling.\n"; }
 };
 
 class Car {
@@ -40,8 +30,7 @@ public:
   int a_year;
   string a_color;
 
-  Car() {
-  }
+  Car() {}
 
   Car(string make, string model, int year, string color) {
     this->a_make = make;
@@ -50,12 +39,8 @@ public:
     this->a_color = color;
   }
 
-  void m_accelerate() {
-    cout << "You step on the gas!\n";
-  }
-  void m_brake() {
-    cout << "You step on the brakes!\n";
-  }
+  void m_accelerate() { cout << "You step on the gas!\n"; }
+  void m_brake() { cout << "You step on the brakes!\n"; }
 };
 
 class Student {
@@ -76,12 +61,9 @@ public:
   string a_topping1;
   string a_topping2;
 
-  Pizza() {
-  }
+  Pizza() {}
 
-  Pizza(string topping1) {
-    this->a_topping1 = topping1;
-  }
+  Pizza(string topping1) { this->a_topping1 = topping1; }
 
   Pizza(string topping1, string topping2) {
     this->a_topping1 = topping1;
@@ -96,15 +78,10 @@ private:
 public:
   int a_publicTemperature = 0;
 
-  Stove() {
-  }
-  Stove(int temperature) {
-    m_setTemperature(temperature);
-  }
+  Stove() {}
+  Stove(int temperature) { m_setTemperature(temperature); }
 
-  int m_getTemperature() {
-    return a_temperature;
-  }
+  int m_getTemperature() { return a_temperature; }
 
   // You can make safety checks inside of setters
   void m_setTemperature(int temperature) {
@@ -122,25 +99,19 @@ class Animal {
 public:
   bool a_alive = true;
 
-  void m_eat() {
-    cout << "This animal is eating.\n";
-  }
+  void m_eat() { cout << "This animal is eating.\n"; }
 };
 
 class Monkey : public Animal {};
 
 class Dog : public Animal {
 public:
-  void m_speak() {
-    cout << "The dog goes woof!\n";
-  }
+  void m_speak() { cout << "The dog goes woof!\n"; }
 };
 
 class Cat : public Animal {
 public:
-  void m_speak() {
-    cout << "The cat goes meow!\n";
-  }
+  void m_speak() { cout << "The cat goes meow!\n"; }
 };
 
 class Shape {
@@ -177,8 +148,7 @@ public:
   int a_level;
   const int a_id; // `const` attributes require an initializer list
 
-  Player(string name, int level, int id) : a_name(name), a_level(level), a_id(id) {
-  }
+  Player(string name, int level, int id) : a_name(name), a_level(level), a_id(id) {}
 };
 
 int main() {

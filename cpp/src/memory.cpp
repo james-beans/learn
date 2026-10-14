@@ -148,9 +148,7 @@ int main() {
     cin >> p_grades[i];
   }
 
-  for (int i = 0; i < sizeg; i++) {
-    cout << p_grades[i] << " ";
-  }
+  for (int i = 0; i < sizeg; i++) { cout << p_grades[i] << " "; }
 
   delete[] p_grades;
 

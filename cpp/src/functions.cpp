@@ -14,20 +14,14 @@ void happyBirthday(int age, string name = "you") {
   cout << "You are " << age << " years old.\n";
 }
 
-void bakePizza() {
-  cout << "Here is your pizza!\n";
-}
-void bakePizza(string topping1) {
-  cout << "Here is your special, " << topping1 << " pizza!\n";
-}
+void bakePizza() { cout << "Here is your pizza!\n"; }
+void bakePizza(string topping1) { cout << "Here is your special, " << topping1 << " pizza!\n"; }
 void bakePizza(string topping1, string topping2) {
   cout << "Here is your extra special, " << topping1 << " and " << topping2 << " pizza!\n";
 }
 
 void walki(int steps) {
-  for (int i = 0; i < steps; i++) {
-    cout << "You take a step.\n";
-  }
+  for (int i = 0; i < steps; i++) { cout << "You take a step.\n"; }
 }
 
 void walkr(int steps) {
@@ -39,9 +33,7 @@ void walkr(int steps) {
 
 int factoriali(int num) {
   int result = 1;
-  for (int i = 1; i <= num; i++) {
-    result = result * i;
-  }
+  for (int i = 1; i <= num; i++) { result = result * i; }
   return result;
 }
 

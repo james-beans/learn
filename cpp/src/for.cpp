@@ -9,30 +9,22 @@ using namespace c;
 namespace count {
   // Count - print (p)
   void p(int iterations, string msg, string end = "\n") {
-    for (int i = 1; i <= iterations; i++) {
-      cout << msg << end;
-    }
+    for (int i = 1; i <= iterations; i++) { cout << msg << end; }
   }
 
   // Count - print array (pa)
   void pa(int iterations, const auto array[], string end = "\n") {
-    for (int i = 0; i < iterations; i++) {
-      cout << array[i] << end;
-    }
+    for (int i = 0; i < iterations; i++) { cout << array[i] << end; }
   }
 
   // Count - increase (i)
   void i(int start, int iterations, int up, string end = "\n") {
-    for (int i = start; i <= iterations; i += up) {
-      cout << i << end;
-    }
+    for (int i = start; i <= iterations; i += up) { cout << i << end; }
   }
 
   // Count - decrease (d)
   void d(int start, int iterations, int down, string end = "\n") {
-    for (int i = start; i >= iterations; i -= down) {
-      cout << i << end;
-    }
+    for (int i = start; i >= iterations; i -= down) { cout << i << end; }
   }
 } // namespace count
 
@@ -51,9 +43,7 @@ namespace fe {
     n();
 
     // Using a `foreach` loop:
-    for (string student : students) {
-      cout << student << '\n';
-    }
+    for (string student : students) { cout << student << '\n'; }
   }
 
   void second() {
@@ -70,9 +60,7 @@ namespace fe {
     n();
 
     // Using a `foreach` loop:
-    for (int grade : grades) {
-      cout << grade << '\n';
-    }
+    for (int grade : grades) { cout << grade << '\n'; }
   }
 } // namespace fe
 

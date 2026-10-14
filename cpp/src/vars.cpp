@@ -9,13 +9,9 @@ using namespace c;
 
 int n2 = 3;
 
-void printN1(int n1) {
-  cout << n1 << '\n';
-}
+void printN1(int n1) { cout << n1 << '\n'; }
 
-void printN2() {
-  cout << n2 << '\n';
-}
+void printN2() { cout << n2 << '\n'; }
 
 void swapa(string x, string y) {
   string temp;

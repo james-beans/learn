@@ -7,18 +7,12 @@ using std::cout;
 using std::string;
 
 namespace c {
-  inline void n() {
-    cout << '\n';
-  }
-  inline void nn() {
-    cout << "\n\n";
-  }
+  inline void n() { cout << '\n'; }
+  inline void nn() { cout << "\n\n"; }
 
   // 1: Just the number
   // Usage: c::section(2);
-  inline void section(int num) {
-    cout << "\n-- Section " << num << ":\n";
-  }
+  inline void section(int num) { cout << "\n-- Section " << num << ":\n"; }
 
   // 2: Number and a title
   // Usage: c::section(2, "Assignment");
@@ -27,7 +21,5 @@ namespace c {
   }
 
   // 3: Just a string title
-  inline void section(string title) {
-    cout << "\n-- Section " << title << ":\n";
-  }
+  inline void section(string title) { cout << "\n-- Section " << title << ":\n"; }
 } // namespace c

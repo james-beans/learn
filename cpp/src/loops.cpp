@@ -23,9 +23,7 @@ int main() {
 
   // Stops the loop entirely when it gets to '3'
   for (int i = 1; i <= 10; i++) {
-    if (i == 3) {
-      break;
-    }
+    if (i == 3) { break; }
     cout << i << '\n';
   }
 
@@ -33,9 +31,7 @@ int main() {
 
   // Skips printing '3' when it gets to it and continues on until '10'
   for (int i = 1; i <= 10; i++) {
-    if (i == 3) {
-      continue;
-    }
+    if (i == 3) { continue; }
     cout << i << '\n';
   }
 

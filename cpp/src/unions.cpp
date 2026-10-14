@@ -14,11 +14,7 @@ union Statistics {
   char rank;
 };
 
-enum class RewardType {
-  CASH,
-  ITEM,
-  EXPERIENCE
-};
+enum class RewardType { CASH, ITEM, EXPERIENCE };
 
 struct Reward {
   RewardType type;

@@ -25,9 +25,7 @@ int main() {
   // This is manually without `fill();`
   string foods[5] = {"pizza", "pizza", "pizza", "pizza", "pizza"};
 
-  for (string food : foods) {
-    cout << food << "\n";
-  }
+  for (string food : foods) { cout << food << "\n"; }
 
   n();
 
@@ -37,9 +35,7 @@ int main() {
   fill(foods2, foods2 + 15,
        "burger"); // Fills the whole array with 15 burger elements
 
-  for (string food : foods2) {
-    cout << food << "\n";
-  }
+  for (string food : foods2) { cout << food << "\n"; }
 
   n();
 
@@ -48,9 +44,7 @@ int main() {
 
   fill(foods3, foods3 + SIZE3, "hotdog");
 
-  for (string food : foods3) {
-    cout << food << "\n";
-  }
+  for (string food : foods3) { cout << food << "\n"; }
 
   n();
 
@@ -61,9 +55,7 @@ int main() {
   fill(foods4, foods4 + (SIZE4 / 2), "toast");
   fill(foods4 + (SIZE4 / 2), foods4 + SIZE4, "beans");
 
-  for (string food : foods4) {
-    cout << food << "\n";
-  }
+  for (string food : foods4) { cout << food << "\n"; }
 
   n();
 
@@ -74,9 +66,7 @@ int main() {
   fill(foods5 + (SIZE5 / 3), foods5 + (SIZE5 / 3) * 2, "burger");
   fill(foods5 + (SIZE5 / 3) * 2, foods5 + SIZE5, "hotdog");
 
-  for (string food : foods5) {
-    cout << food << "\n";
-  }
+  for (string food : foods5) { cout << food << "\n"; }
 
   return 0;
 }

@@ -18,17 +18,9 @@ enum Day {
   saturday = 6
 };
 
-enum class Color {
-  red,
-  green,
-  blue
-};
+enum class Color { red, green, blue };
 
-enum class TrafficLight {
-  red,
-  yellow,
-  green
-};
+enum class TrafficLight { red, yellow, green };
 
 int main() {
   // -- Section 1:
