@@ -96,6 +96,9 @@ compile() {
   # src/align.cpp
   clang++ -std=c++23 src/align.cpp -o dist/align
 
+  # src/unions.cpp
+  clang++ -std=c++23 src/unions.cpp -o dist/unions
+
   n && echo "Compiled all programs." && n
 }
 

@@ -32,7 +32,8 @@ TARGETS = \
 	dist/structs \
 	dist/enums \
 	dist/classes \
-	dist/align
+	dist/align \
+	dist/unions
 
 .PHONY: all clean directories
 
@@ -140,4 +141,7 @@ dist/classes: src/classes.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 dist/align: src/align.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@
+
+dist/unions: src/unions.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@

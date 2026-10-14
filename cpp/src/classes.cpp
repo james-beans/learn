@@ -142,6 +142,15 @@ public:
   }
 };
 
+class Player {
+public:
+  string a_name;
+  int a_level;
+  const int a_id; // `const` attributes require an initializer list
+
+  Player(string name, int level, int id) : a_name(name), a_level(level), a_id(id) {}
+};
+
 int main() {
   // -- Section 1:
   section(1);
@@ -366,6 +375,29 @@ int main() {
 
   cout << "Sphere Area: " << sphere.a_area << "cm\n";
   cout << "Sphere Volume: " << sphere.a_volume << "cm^3\n";
+
+  // -- Section 6:
+  section(6);
+
+  /*
+   * A member initializer list is a way to initialize `class` attributes
+   * directly before the constructor body runs.
+   *
+   * `Name(args) : attribute(value), attribute(value) {}`
+   *
+   * It is used because:
+   * - It initializes attributes instantly upon creation rather than
+   *   default-initializing them and then assigning values inside the
+   *   body.
+   * - It is strictly required when initializing `const` attributes or
+   *  reference variables `&` because they cannot be assigned to later.
+   */
+
+  Player pdefault("James", 15, 1);
+
+  cout << "Name: " << pdefault.a_name << "\n";
+  cout << "Level: " << pdefault.a_level << "\n";
+  cout << "ID: " << pdefault.a_id << "\n";
 
   return 0;
 }
