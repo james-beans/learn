@@ -23,8 +23,6 @@ jobs:
       - name: Download latest config files
         run: |
           curl -o .clang-format https://raw.githubusercontent.com/james-beans/james-beans/refs/heads/main/.clang-format
-          mkdir -p .github/workflows
-          curl -o .github/workflows/lint.yml https://raw.githubusercontent.com/james-beans/james-beans/refs/heads/main/.github/workflows/lint.yml
 
       - name: Configure Git Identity
         run: |
