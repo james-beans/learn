@@ -16,15 +16,18 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Install clang-format
+        run: |
+          wget https://apt.llvm.org/llvm.sh
+          chmod +x llvm.sh
+          sudo ./llvm.sh 20
+          sudo apt install -y clang-format-20
+          rm llvm.sh
+
       - name: Checkout code
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
-
-      - name: Install clang-format
-        run: |
-          sudo apt update
-          sudo apt install -y clang-format
 
       - name: Format files
         run: find . \( -name "*.hpp" -o -name "*.cpp" -o -name "*.h" -o -name "*.c" \) -not -path "./.git/*" -exec clang-format -i {} +
