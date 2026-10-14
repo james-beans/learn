@@ -45,7 +45,7 @@ int main() {
   string* p_name = &namep;
   int* p_age = &agep;
   string* p_freePizzas =
-      freePizzasp; // Arrays don't need to use `&` as its already a memory address
+    freePizzasp; // Arrays don't need to use `&` as its already a memory address
 
   cout << p_name << "\n";       // Prints the memory address
   cout << *p_name << "\n";      // Prints the value of that pointer
@@ -148,7 +148,9 @@ int main() {
     cin >> p_grades[i];
   }
 
-  for (int i = 0; i < sizeg; i++) { cout << p_grades[i] << " "; }
+  for (int i = 0; i < sizeg; i++) {
+    cout << p_grades[i] << " ";
+  }
 
   delete[] p_grades;
 

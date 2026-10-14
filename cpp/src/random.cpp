@@ -21,7 +21,9 @@ namespace pr {
     // int res = (rand() % b) + a;
     int res = (rand() % (b - a + 1)) + a;
 
-    if (print) { cout << res << end; }
+    if (print) {
+      cout << res << end;
+    }
 
     return res;
   }

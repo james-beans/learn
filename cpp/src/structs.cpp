@@ -34,7 +34,9 @@ void printCaro(Car& car) {
   cout << car.color << "\n";
 }
 
-void paintCar(Car& car, string color) { car.color = color; }
+void paintCar(Car& car, string color) {
+  car.color = color;
+}
 
 int main() {
   // -- Section 1:

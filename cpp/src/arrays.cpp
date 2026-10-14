@@ -12,7 +12,9 @@ using namespace c;
 double getTotal(double prices[], int size) {
   double total = 0;
 
-  for (int i = 0; i < size; i++) { total += prices[i]; }
+  for (int i = 0; i < size; i++) {
+    total += prices[i];
+  }
 
   return total;
 }
@@ -20,7 +22,9 @@ double getTotal(double prices[], int size) {
 int intSearchArray(int array[], int size, int element) {
   // Linear search
   for (int i = 0; i < size; i++) {
-    if (array[i] == element) { return i; }
+    if (array[i] == element) {
+      return i;
+    }
   }
   /*
    * In programming, -1 is a sentinel value.
@@ -32,7 +36,9 @@ int intSearchArray(int array[], int size, int element) {
 
 int stringSearchArray(string array[], int size, string element) {
   for (int i = 0; i < size; i++) {
-    if (array[i] == element) { return i; }
+    if (array[i] == element) {
+      return i;
+    }
   }
   return -1;
 }
@@ -225,7 +231,9 @@ int main() {
   // For loop:
   int studentsElements = sizeof(students) / sizeof(string);
 
-  for (int i = 0; i < studentsElements; i++) { cout << students[i] << '\n'; }
+  for (int i = 0; i < studentsElements; i++) {
+    cout << students[i] << '\n';
+  }
 
   n();
 
@@ -241,7 +249,9 @@ int main() {
   // For loop:
   int gradesElements = sizeof(grades) / sizeof(char);
 
-  for (int i = 0; i < gradesElements; i++) { cout << grades[i] << '\n'; }
+  for (int i = 0; i < gradesElements; i++) {
+    cout << grades[i] << '\n';
+  }
 
   // -- Section 3:
   section(3);
@@ -318,13 +328,17 @@ int main() {
 
   sorta(sortList, sizel);
 
-  for (int element : sortList) { cout << element << " "; }
+  for (int element : sortList) {
+    cout << element << " ";
+  }
 
   n();
 
   sortd(sortList, sizel);
 
-  for (int element : sortList) { cout << element << " "; }
+  for (int element : sortList) {
+    cout << element << " ";
+  }
 
   n();
 
@@ -344,7 +358,9 @@ int main() {
 
   cout << "You like the following food:\n";
 
-  for (string food : foodsi) { cout << food << "\n"; }
+  for (string food : foodsi) {
+    cout << food << "\n";
+  }
 
   n();
 
@@ -365,7 +381,9 @@ int main() {
   cout << "You like the following food:\n";
 
   // This for loop shouldn't display any elements that are empty
-  for (int i = 0; !foodsi2[i].empty(); i++) { cout << foodsi2[i] << "\n"; }
+  for (int i = 0; !foodsi2[i].empty(); i++) {
+    cout << foodsi2[i] << "\n";
+  }
 
   // -- Section 7:
   section(7);
@@ -412,11 +430,15 @@ int main() {
   int columns = sizeof(cars[0]) / sizeof(cars[0][0]);
 
   // Print the memory addresses of each inner array
-  for (int i = 0; i < rows; i++) { cout << "#" << i << " " << cars[i] << "\n"; }
+  for (int i = 0; i < rows; i++) {
+    cout << "#" << i << " " << cars[i] << "\n";
+  }
 
   // To get the elements in each array
   for (int i = 0; i < rows; i++) {
-    for (int j = 0; j < columns; j++) { cout << cars[i][j] << " "; }
+    for (int j = 0; j < columns; j++) {
+      cout << cars[i][j] << " ";
+    }
     cout << "\n";
   }
 

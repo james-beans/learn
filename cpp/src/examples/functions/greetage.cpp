@@ -12,4 +12,6 @@ void greetage(string name = "user", int age = 20) {
   cout << "You are " << age << " years old.\n";
 }
 
-int main() { greetage("James", 20); }
+int main() {
+  greetage("James", 20);
+}
